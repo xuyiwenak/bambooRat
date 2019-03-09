@@ -8,16 +8,16 @@ source ${MYLODER}/goenv.sh
 
 set +e
 echo "Clean old content ..."
-rm -fr ${GOROOT}
-rm -fr ${GOPATH}
+rm -rf ${GOROOT}
+rm -rf ${GOPATH}
 echo "Clean old content ...Done"
 set -e
 
 # 解压缩go执行文件
 cd ${GOHOME}
-curl -L "http://192.168.10.114/golang/mac/go1.11.darwin-amd64.tar.gz" -o temp.tar 
+curl -L https://studygolang.com/dl/golang/go1.12.src.tar.gz -o temp.tar
 tar xf temp.tar 
-rm -fr temp.tar 
+rm -rf temp.tar
 
 
 
