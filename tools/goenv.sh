@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 建立内部变量和输出路径
-export GOHOME=`dirname ${MYLODER}`
+export GOHOME=$MYLODER
 export GOROOT=${GOHOME}/go
 export GOPATH=${GOHOME}/goprojects
 export PATH=${GOROOT}/bin:${GOPATH}/bin:${PATH}
