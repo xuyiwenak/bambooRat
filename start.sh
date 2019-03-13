@@ -5,11 +5,26 @@ MYLODER=$(cd `dirname ${0}`; pwd)
 # 先设置环境变量
 source ${MYLODER}/tools/goenv.sh
 
-set +e
-rm -rf ${GOROOT}
-echo "Clean old GOROOT ...Done"
-rm -rf ${GOPATH}
-echo "Clean old GOPATH ...Done"
+GOFOLDER="${MYLODER}/go"
+GOPROJECTS="${MYLODER}/goprojects"
+
+if [ ${GOROOT} == ${GOFOLDER} ];
+then
+    echo "locate the same GOROOT in ${GOROOT}"
+    if [ ${GOPATH} == ${GOPROJECTS} ];
+    then
+        echo "locate the same GOPATH in ${GOPATH}"
+        exit 1
+    else
+        rm -rf ${GOPATH}
+        echo "Clean old GOPATH ...Done"
+    fi
+else
+    rm -rf ${GOROOT}
+    echo "Clean old GOROOT ...Done"
+fi
+echo "configure go env done !"
+
 set -e
 # 安装go pkg
 source ${MYLODER}/tools/goinstall.sh
