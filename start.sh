@@ -11,12 +11,8 @@ echo "Clean old GOROOT ...Done"
 rm -rf ${GOPATH}
 echo "Clean old GOPATH ...Done"
 set -e
-
-# 解压缩go执行文件
-cd ${GOHOME}
-curl -L https://studygolang.com/dl/golang/go1.12.src.tar.gz -o temp.tar
-tar xvf temp.tar
-rm -rf temp.tar
+# 安装go pkg
+source ${MYLODER}/tools/goinstall.sh
 
 # 设置环境变量
 echo "update ~/.bash_profile ..."
