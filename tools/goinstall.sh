@@ -1,9 +1,9 @@
 #!/bin/bash
-
+consul_url="https://studygolang.com/dl/golang/go1.12.src.tar.gz"
 set -e
 # 解压缩go执行文件
 cd ${GOHOME}
-curl -L https://studygolang.com/dl/golang/go1.12.src.tar.gz -o temp.tar
+curl -L $consul_url -o temp.tar
 tar xvf temp.tar
 rm -rf temp.tar
 
@@ -13,5 +13,8 @@ echo "ready to make go pkg..."
 source all.bash
 echo "install go pkg success!"
 set +e
+
+
+
 
 
