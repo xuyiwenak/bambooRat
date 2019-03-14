@@ -4,5 +4,5 @@
 go/
 *.toml
 *.lock
-goprojects/bin/*
-goprojects/pkg/*
+goprojects/*
+!goprojects/src
