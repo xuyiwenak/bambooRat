@@ -11,16 +11,24 @@ unzip temp.zip
 rm temp.zip
 curl -L $protobuf_url -o temp.tar
 tar xvf temp.tar
+find . -name "consul" | xargs -I {} mv {} ${GOPATH}/bin
 rm -rf temp.tar
 
 # 安装pb环境
 PBPATH=`ls -d protobuf*`
 cd $PBPATH
-./configure --prefix=/usr/local/protobuf
+./configure --prefix=${GOPATH}
 make
 make check
 make install
 
+export PROTOBUF=/${GOPATH}
+export PATH=$PROTOBUF/bin:$PATH
+echo "PBPATH=${PBPATH}"
+# 设置环境变量
+echo "update ~/.bash_profile for protobuf..."
+PFILE="$HOME/.bash_profile"
+source $PFILE
 
 
 # consul agent -dev
