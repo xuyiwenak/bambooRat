@@ -25,10 +25,17 @@ make install
 export PROTOBUF=/${GOPATH}
 export PATH=$PROTOBUF/bin:$PATH
 echo "PBPATH=${PBPATH}"
+
+echo "downloading github.com/golang/protobuf/protoc-gen-go..."
+go get -d -u github.com/golang/protobuf/protoc-gen-go
+echo "go install github.com/golang/protobuf/protoc-gen-go..."
+go install github.com/golang/protobuf/protoc-gen-go
+go install github.com/golang/protobuf/proto
 # 设置环境变量
 echo "update ~/.bash_profile for protobuf..."
 PFILE="$HOME/.bash_profile"
 source $PFILE
+
 
 
 # consul agent -dev

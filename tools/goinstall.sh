@@ -1,20 +1,32 @@
 #!/bin/bash
-go_url="https://studygolang.com/dl/golang/go1.12.src.tar.gz"
+
 set -e
-# 解压缩go执行文件
-cd ${GOHOME}
-curl -L $go_url -o temp.tar
-tar xvf temp.tar
-rm -rf temp.tar
 
-cd $GOROOT/src
-echo "ready to make go pkg..."
-# 安装go语言包体
-source all.bash
-echo "install go pkg success!"
-set +e
+MYLODER=$(cd `dirname ${0}`; pwd)
+cd ${MYLODER}
+
+if [ ! -d ${GOPATH}/bin ]
+then
+mkdir -p ${GOPATH}/bin
+fi
+if [ ! -d ${GOPATH}/pkg ]
+then
+mkdir -p ${GOPATH}/pkg
+fi
 
 
+
+function goinstall()
+{
+    cd ${GOPATH}/bin
+    echo "GO-INSTALL-> $1"
+    go install $1
+}
+
+goinstall golang.org/x/net/ipv4
+goinstall golang.org/x/net/ipv6
+goinstall golang.org/x/net/context
+goinstall golang.org/x/net/bpf
 
 
 
