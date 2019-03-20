@@ -3,6 +3,8 @@
 consul_url="https://releases.hashicorp.com/consul/1.4.3/consul_1.4.3_darwin_amd64.zip"
 protobuf_url="https://github.com/protocolbuffers/protobuf/releases/download/v3.7.0/protobuf-all-3.7.0.tar.gz"
 
+PFILE="$HOME/.bash_profile"
+source $PFILE
 mkdir -p $GOPATH/bin
 mkdir -p $GOPATH/pkg/download
 cd $GOPATH/pkg/download/
