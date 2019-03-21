@@ -35,9 +35,13 @@ echo "go install github.com/golang/protobuf/protoc-gen-go..."
 go install github.com/golang/protobuf/protoc-gen-go
 go install github.com/golang/protobuf/proto
 
+# download go-micro
+go get -d -u github.com/micro/go-micro
+go install github.com/micro/go-micro
 # download protoc-gen-micro
 go get -d -u github.com/micro/protoc-gen-micro
 go install github.com/micro/protoc-gen-micro
+
 # set env
 echo "update ~/.bash_profile for protobuf..."
 PFILE="$HOME/.bash_profile"
