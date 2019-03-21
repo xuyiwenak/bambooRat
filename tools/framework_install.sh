@@ -16,7 +16,7 @@ tar xvf temp.tar
 find . -name "consul" | xargs -I {} mv {} ${GOPATH}/bin
 rm -rf temp.tar
 
-# 安装pb环境
+# install pb library env
 PBPATH=`ls -d protobuf*`
 cd $PBPATH
 ./configure --prefix=${GOPATH}
@@ -28,12 +28,17 @@ export PROTOBUF=/${GOPATH}
 export PATH=$PROTOBUF/bin:$PATH
 echo "PBPATH=${PBPATH}"
 
+# download protoc-gen-go
 echo "downloading github.com/golang/protobuf/protoc-gen-go..."
 go get -d -u github.com/golang/protobuf/protoc-gen-go
 echo "go install github.com/golang/protobuf/protoc-gen-go..."
 go install github.com/golang/protobuf/protoc-gen-go
 go install github.com/golang/protobuf/proto
-# 设置环境变量
+
+# download protoc-gen-micro
+go get -d -u github.com/micro/protoc-gen-micro
+go install github.com/micro/protoc-gen-micro
+# set env
 echo "update ~/.bash_profile for protobuf..."
 PFILE="$HOME/.bash_profile"
 source $PFILE

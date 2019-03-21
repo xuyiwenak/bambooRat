@@ -41,6 +41,8 @@ fi
 cd $GOPATH/src/google.golang.org
 echo "downling google.golang.org pkgs---------------------------->"
 gitclone ${MYHOST}/google/go-genproto.git
-
+mv go-genproto genproto
+gitclone  ${MYHOST}/grpc/grpc-go.git
+mv grpc-go grpc
 echo "git clone GFW pkgs done!----------------------------------->"
 

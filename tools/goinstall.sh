@@ -14,8 +14,6 @@ then
 mkdir -p ${GOPATH}/pkg
 fi
 
-
-
 function goinstall()
 {
     cd ${GOPATH}/bin
@@ -27,6 +25,8 @@ goinstall golang.org/x/net/ipv4
 goinstall golang.org/x/net/ipv6
 goinstall golang.org/x/net/context
 goinstall golang.org/x/net/bpf
+goinstall google.golang.org/genproto
+goinstall google.golang.org/grpc
 
 
 
