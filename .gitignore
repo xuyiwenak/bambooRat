@@ -5,5 +5,11 @@
 go/
 *.toml
 *.lock
-goprojects/*
-goprojects/src
+goprojects/bin/*
+goprojects/include/*
+goprojects/lib/*
+goprojects/pkg/*
+goprojects/src/github.com/*
+goprojects/src/golang.org/*
+goprojects/src/google.golang.org/*
+
