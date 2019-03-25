@@ -27,4 +27,4 @@ echo '{"service": {"name": "web", "tags": ["rails"], "port": 80}}'>web.json
 curl http://localhost:8500/v1/catalog/service/web
 ```
 - API相关文档  
-https://www.consul.io/api/agent/service.html
+[agent文档](https://www.consul.io/api/agent/service.html) 
