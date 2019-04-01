@@ -1,1 +1,16 @@
-{"service": {"name": "web", "tags": ["rails"], "port": 80}}
+{
+  "service": {
+    "name": "web",
+    "port": 18080,
+    "connect": {
+      "sidecar_service": {
+        "proxy": {
+          "upstreams": [{
+             "destination_name": "socat",
+             "local_bind_port": 9191
+          }]
+        }
+      }
+    }
+  }
+}
