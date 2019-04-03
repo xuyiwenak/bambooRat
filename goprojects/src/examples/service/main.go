@@ -6,8 +6,8 @@ import (
 
 	"context"
 	"github.com/micro/cli"
-	proto "github.com/micro/examples/service/proto"
-	"github.com/micro/go-micro"
+	proto "examples/service/proto"
+	micro "github.com/micro/go-micro"
 )
 
 /*
