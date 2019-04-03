@@ -41,9 +41,11 @@ go install github.com/micro/go-micro
 # download protoc-gen-micro
 go get -d -u github.com/micro/protoc-gen-micro
 go install github.com/micro/protoc-gen-micro
-
+# download go-web
+go get -d -u github.com/micro/go-web
+go install github.com/micro/go-web
 # set env
-echo "update ~/.bash_profile for protobuf..."
+echo "update ~/.bash_profile..."
 PFILE="$HOME/.bash_profile"
 source $PFILE
 

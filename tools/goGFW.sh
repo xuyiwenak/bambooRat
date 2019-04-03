@@ -33,6 +33,7 @@ gitclone ${MYHOST}/golang/sync.git
 gitclone ${MYHOST}/golang/sys.git
 gitclone ${MYHOST}/golang/text.git
 gitclone ${MYHOST}/golang/tools.git
+gitclone  github.com/micro/go-web
 
 if [ ! -d ${GOPATH}/src/google.golang.org ];
 then
