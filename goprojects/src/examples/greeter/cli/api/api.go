@@ -2,12 +2,11 @@ package main
 
 import (
 	"bytes"
+	hello "examples/greeter/proto"
 	"fmt"
+	"github.com/golang/protobuf/proto"
 	"io/ioutil"
 	"net/http"
-
-	"github.com/golang/protobuf/proto"
-	hello "examples/greeter/proto"
 )
 
 func main() {
