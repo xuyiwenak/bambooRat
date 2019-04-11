@@ -33,7 +33,7 @@ gitclone ${MYHOST}/golang/sync.git
 gitclone ${MYHOST}/golang/sys.git
 gitclone ${MYHOST}/golang/text.git
 gitclone ${MYHOST}/golang/tools.git
-gitclone  github.com/micro/go-web
+gitclone ${MYHOST}/micro/micro.git
 
 if [ ! -d ${GOPATH}/src/google.golang.org ];
 then
@@ -41,9 +41,22 @@ then
 fi
 cd $GOPATH/src/google.golang.org
 echo "downling google.golang.org pkgs---------------------------->"
+cd $GOPATH/src/
+if [ ! -d ${GOPATH}/src/github.com ];
+then
+    mkdir -p ${GOPATH}/src/github.com
+fi
+cd $GOPATH/src/github.com
+gitclone ${MYHOST}/micro/micro.git
+cd ..
 gitclone ${MYHOST}/google/go-genproto.git
 mv go-genproto genproto
+cd ..
 gitclone  ${MYHOST}/grpc/grpc-go.git
 mv grpc-go grpc
 echo "git clone GFW pkgs done!----------------------------------->"
+cd ..
+
+
+
 

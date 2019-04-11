@@ -13,3 +13,4 @@ goprojects/src/github.com/*
 goprojects/src/golang.org/*
 goprojects/src/google.golang.org/*
 
+goprojects/share/man/man1/socat.1
