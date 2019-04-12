@@ -44,6 +44,8 @@ go install github.com/micro/protoc-gen-micro
 # download go-web
 go get -d -u github.com/micro/go-web
 go install github.com/micro/go-web
+# download yaml.v3
+go get gopkg.in/yaml.v3
 # set env
 echo "update ~/.bash_profile..."
 PFILE="$HOME/.bash_profile"

@@ -1,61 +1,39 @@
 #! /bin/bash
 
-export MYHOST=https://github.com
-# 如果不存在则创建一个目录
-if [ ! -d ${GOPATH}/src/golang.org/x ];
-then
-    mkdir -p ${GOPATH}/src/golang.org/x
-fi
-
-cd $GOPATH/src/golang.org/x
+GITHUB_LIST_NAME="github_list"
+GITHUB_LIST=`cat ${GITHUB_LIST_NAME}`
 
 function gitclone()
 {
-    TOPATH=$1
-    TMP=${TOPATH%%.git*}
-    TODIR=${TMP##*\/}
-    if [ -d ${TODIR} ]
-    then
-        echo "GIT-PULL -> ${TOPATH}"
-        cd ${TODIR}
+    if [[ $# != 2 ]]; then
+        echo "git clone params error!"
+        exit 0
+    fi
+    GITURL=$1
+    FOLDER=$2
+    if [[ -d ${GOPATH}/src/${FOLDER} ]]; then
+        cd ${GOPATH}/src/${FOLDER}
         git pull
-        cd ..
     else
-        echo "GIT-CLONE-> ${TOPATH}"
-        git clone ${TOPATH}
+        git clone ${GITURL} ${GOPATH}/src/${FOLDER}
     fi
 }
-echo "downling golang.org pkgs----------------------------------->"
-gitclone ${MYHOST}/golang/net.git
-gitclone ${MYHOST}/golang/crypto.git
-gitclone ${MYHOST}/golang/image.git
-gitclone ${MYHOST}/golang/sync.git
-gitclone ${MYHOST}/golang/sys.git
-gitclone ${MYHOST}/golang/text.git
-gitclone ${MYHOST}/golang/tools.git
-gitclone ${MYHOST}/micro/micro.git
 
-if [ ! -d ${GOPATH}/src/google.golang.org ];
-then
-    mkdir -p ${GOPATH}/src/google.golang.org
-fi
-cd $GOPATH/src/google.golang.org
-echo "downling google.golang.org pkgs---------------------------->"
-cd $GOPATH/src/
-if [ ! -d ${GOPATH}/src/github.com ];
-then
-    mkdir -p ${GOPATH}/src/github.com
-fi
-cd $GOPATH/src/github.com
-gitclone ${MYHOST}/micro/micro.git
-cd ..
-gitclone ${MYHOST}/google/go-genproto.git
-mv go-genproto genproto
-cd ..
-gitclone  ${MYHOST}/grpc/grpc-go.git
-mv grpc-go grpc
-echo "git clone GFW pkgs done!----------------------------------->"
-cd ..
+for GITURL in ${GITHUB_LIST}
+do
+    # 如果是golang相关的库
+    if [[ ${GITURL} == "*golang.org*" ]]; then
+        # sed用%作为分隔符
+        FINAL_LIST=`echo ${GITURL}|sed 's%golang%golang.org%g'|sed 's%google%google.golang.org%g'`
+        echo $FINAL_LIST
+        FOLDER=`echo ${GITURL}|sed 's%http://github.com/%%g'|sed 's%.git%%g'`
+        gitclone ${GITURL} ${FOLDER}
+    else
+        FOLDER=`echo ${GITURL}|sed 's%http://%%g'|sed 's%.git%%g'`
+        echo $FOLDER
+        gitclone ${GITURL} ${FOLDER}
+    fi
+done
 
 
 
