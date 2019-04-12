@@ -22,11 +22,11 @@ function gitclone()
 for GITURL in ${GITHUB_LIST}
 do
     # 如果是golang相关的库
-    if [[ ${GITURL} == "*golang.org*" ]]; then
+    echo $GITURL
+    if [[ ${GITURL} == *"golang"* ]]; then
         # sed用%作为分隔符
-        FINAL_LIST=`echo ${GITURL}|sed 's%golang%golang.org%g'|sed 's%google%google.golang.org%g'`
-        echo $FINAL_LIST
-        FOLDER=`echo ${GITURL}|sed 's%http://github.com/%%g'|sed 's%.git%%g'`
+        FOLDER=`echo ${GITURL}|sed 's%golang%golang.org/x%g'|sed 's%http://github.com/%%g'|sed 's%.git%%g'`
+        echo $FOLDER
         gitclone ${GITURL} ${FOLDER}
     else
         FOLDER=`echo ${GITURL}|sed 's%http://%%g'|sed 's%.git%%g'`

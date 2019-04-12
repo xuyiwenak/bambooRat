@@ -10,7 +10,6 @@ http://github.com/gin-gonic/gin.git
 http://github.com/globalsign/mgo.git
 http://github.com/go-log/log.git
 http://github.com/go-redis/redis.git
-http://github.com/golang/protobuf.git
 http://github.com/gomodule/redigo.git
 http://github.com/google/uuid.git
 http://github.com/gorilla/handlers.git
@@ -36,8 +35,6 @@ http://github.com/micro/go-rcache.git
 http://github.com/micro/go-web.git
 http://github.com/micro/hipchat.git
 http://github.com/micro/mdns.git
-http://github.com/micro/micro.git
-http://github.com/micro/protoc-gen-micro.git
 http://github.com/micro/util.git
 http://github.com/miekg/dns.git
 http://github.com/mitchellh/hashstructure.git
@@ -53,10 +50,10 @@ http://github.com/ugorji/go.git
 http://github.com/unidoc/unidoc.git
 http://github.com/xlab/treeprint.git
 http://github.com/zserge/webview.git
-http://github.com/golang/x/crypto.git
-http://github.com/golang/x/image.git
-http://github.com/golang/x/net.git
-http://github.com/golang/x/sync.git
-http://github.com/golang/x/sys.git
-http://github.com/golang/x/text.git
-http://github.com/golang/x/tools.git
+http://github.com/golang/crypto.git
+http://github.com/golang/image.git
+http://github.com/golang/net.git
+http://github.com/golang/sync.git
+http://github.com/golang/sys.git
+http://github.com/golang/text.git
+http://github.com/golang/tools.git
