@@ -4,7 +4,8 @@ set -e
 MYLODER=$(cd `dirname ${0}`; pwd)
 # 先设置环境变量
 source ${MYLODER}/tools/goenv.sh
-
+# 解决部分被屏蔽的golang.org相关库, 具体查看github_list文件夹
+source ${MYLODER}/tools/goGFW.sh
 GOFOLDER="${MYLODER}/go"
 GOPROJECTS="${MYLODER}/goprojects"
 

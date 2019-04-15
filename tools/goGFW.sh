@@ -21,16 +21,17 @@ function gitclone()
 
 for GITURL in ${GITHUB_LIST}
 do
-    # 如果是golang相关的库
-    echo $GITURL
     if [[ ${GITURL} == *"golang"* ]]; then
+        # 如果是golang相关的库
         # sed用%作为分隔符
         FOLDER=`echo ${GITURL}|sed 's%golang%golang.org/x%g'|sed 's%http://github.com/%%g'|sed 's%.git%%g'`
-        echo $FOLDER
+        echo "check golang dictionaries : ${GOPATH}/src/${FOLDER}"
+        echo "from : ${GITURL}"
         gitclone ${GITURL} ${FOLDER}
     else
         FOLDER=`echo ${GITURL}|sed 's%http://%%g'|sed 's%.git%%g'`
-        echo $FOLDER
+        echo "check github dictionaries : ${GOPATH}/src/${FOLDER}"
+        echo "from : ${GITURL}"
         gitclone ${GITURL} ${FOLDER}
     fi
 done

@@ -1,6 +1,6 @@
 http://github.com/BurntSushi/toml.git
 http://github.com/bitly/go-simplejson.git
-http://github.com/chzyer/readlin.git
+http://github.com/chzyer/readline.git
 http://github.com/derekparker/delve.git
 http://github.com/elazarl/go-bindata-assetfs.git
 http://github.com/fsnotify/fsnotify.git
