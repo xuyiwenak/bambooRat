@@ -4,8 +4,6 @@ set -e
 MYLODER=$(cd `dirname ${0}`; pwd)
 # 先设置环境变量
 source ${MYLODER}/tools/goenv.sh
-# 解决部分被屏蔽的golang.org相关库, 具体查看github_list文件夹
-source ${MYLODER}/tools/goGFW.sh
 GOFOLDER="${MYLODER}/go"
 GOPROJECTS="${MYLODER}/goprojects"
 
@@ -25,10 +23,6 @@ else
     echo "Clean old GOROOT ...Done"
 fi
 echo "configure go env done !"
-
-set -e
-# 安装go pkg
-source ${MYLODER}/tools/goinstall.sh
 
 # 设置环境变量
 echo "update ~/.bash_profile ..."
@@ -51,3 +45,11 @@ source $PFILE
 echo "环境变量发生变化，你需要重新登录才可能生效"
 echo "configure go env done !"
 
+source ${MYLODER}/tools/framework_install.sh
+set -e
+
+# 解决部分被屏蔽的golang.org相关库, 具体查看github_list文件夹
+source ${MYLODER}/tools/goGFW.sh
+# 安装go pkg
+source ${MYLODER}/tools/goinstall.sh
+echo "go install done !"

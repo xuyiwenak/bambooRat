@@ -35,6 +35,21 @@ do
         gitclone ${GITURL} ${FOLDER}
     fi
 done
+# install grpc
+if [[ -d $GOPATH/src/google.golang.org/grpc ]]; then
+    cd $GOPATH/src/google.golang.org/grpc
+    git pull
+else
+    git clone https://github.com/grpc/grpc-go.git $GOPATH/src/google.golang.org/grpc
+fi
+# install genproto
+if [[ -d $GOPATH/src/google.golang.org/genproto ]]; then
+    cd $GOPATH/src/google.golang.org/genproto
+    git pull
+else
+    git clone https://github.com/google/go-genproto.git $GOPATH/src/google.golang.org/genproto
+fi
+
 
 
 

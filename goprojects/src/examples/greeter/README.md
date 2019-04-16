@@ -6,7 +6,7 @@ An example Greeter application
 ## Contents 目录
 
 - **srv** - an RPC greeter service - RPC服务的位置  
-- **cli** - an RPC client that calls the service once - 调用的客户端服务  
+- **cli** - an RPC client that calls the service once - 调用的客户端服务，这个客户端只会调用一次 
 - **api** - examples of RPC API and RESTful API - 调用接口  
 - **web** - how to use go-web to write web services - go-web服务相关
 
