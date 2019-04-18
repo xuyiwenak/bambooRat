@@ -39,7 +39,21 @@ replace (
 go 1.12
 
 require (
+	github.com/99designs/gqlgen v0.7.1
 	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2 // indirect
+	github.com/emicklei/go-restful v2.8.1+incompatible
+	github.com/gin-gonic/gin v1.3.0
+	github.com/golang/protobuf v1.3.1
 	github.com/mattn/go-colorable v0.1.1 // indirect
+	github.com/micro/examples v0.1.0
+	github.com/micro/go-log v0.1.0
 	github.com/micro/go-micro v1.1.0
+	github.com/micro/go-web v0.6.0
+	github.com/micro/micro v0.22.0
+	github.com/vektah/gqlparser v1.1.0
+	golang.org/x/net v0.0.0-20190327214358-63eda1eb0650
+	google.golang.org/grpc v1.19.1
+	gopkg.in/fatih/pool.v2 v2.0.0 // indirect
+	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
+	k8s.io/utils v0.0.0-00010101000000-000000000000 // indirect
 )

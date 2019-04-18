@@ -3,8 +3,6 @@
 .idea
 *.sh linguist-language=go
 go/
-*.toml
-*.lock
 goprojects/bin/*
 goprojects/include/*
 goprojects/lib/*
@@ -12,5 +10,4 @@ goprojects/pkg/*
 goprojects/src/github.com/*
 goprojects/src/golang.org/*
 goprojects/src/google.golang.org/*
-
 goprojects/share/man/man1/socat.1
