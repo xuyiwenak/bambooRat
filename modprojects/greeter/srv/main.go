@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	hello "github.com/micro/examples/greeter/srv/proto/hello"
 	"github.com/micro/go-micro"
+	hello "github.com/xuyiwenak/bambooRat/tree/master/modprojects/greeter/proto/hello"
 	"log"
 	"time"
 )
