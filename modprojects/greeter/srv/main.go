@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
+	hello "github.com/micro/examples/greeter/srv/proto/hello"
 	"github.com/micro/go-micro"
 	"log"
-	hello "proto/hello"
 	"time"
 )
 

@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	hello "examples/greeter/proto"
 	"github.com/micro/go-micro"
+	hello "github.com/xuyiwenak/bambooRat/tree/master/modprojects/proto/hello"
 )
 
 func main() {
