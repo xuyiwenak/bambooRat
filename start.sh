@@ -44,7 +44,7 @@ echo "export PATH=\${GOROOT}/bin:\${GOPATH}/bin:\${PATH}" >> ${PFILE}
 source $PFILE
 echo "环境变量发生变化，你需要重新登录才可能生效"
 echo "configure go env done !"
-
+source ${MYLODER}/tools/golang_install.sh
 source ${MYLODER}/tools/framework_install.sh
 set -e
 

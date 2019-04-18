@@ -12,4 +12,5 @@ echo "GOROOT=${GOROOT}"
 echo "GOPATH=${GOPATH}"
 echo "GO111MODULE=${GO111MODULE}"
 echo "PATH=${PATH}"
-
+echo "update ~/.bash_profile..."
+source "$HOME/.bash_profile"
