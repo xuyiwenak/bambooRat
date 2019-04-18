@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
+	hello "examples/proto/hello"
 	"fmt"
 	"github.com/micro/go-micro"
-	hello "src/examples/proto/hello"
 )
 
 func main() {

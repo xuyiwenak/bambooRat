@@ -866,6 +866,7 @@ github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q
 github.com/xlab/treeprint v0.0.0-20181112141820-a009c3971eca/go.mod h1:ce1O1j6UtZfjr22oyGxGLbauSBp2YVXpARAosm7dHBg=
 github.com/xuyiwenak/bambooRat v0.0.0-20190418073037-d937405dd0c1 h1:PicGu8NsU1EvBjnSzYN2NqF8fI/HsPhoFrMu9kbheg0=
 github.com/xuyiwenak/bambooRat v0.0.0-20190418074415-a0546998e9c9 h1:6Fy/jPk9cXLTp0cn3vga7jn1MTHB6X7/q9Z4mON84LA=
+github.com/xuyiwenak/bambooRat v0.0.0-20190418075342-e27628f9a54c h1:mX/4Mv7H10JblD0d14OxXcVkzxxmtdwMNPEBtG7/PaQ=
 github.com/yudai/gojsondiff v1.0.0/go.mod h1:AY32+k2cwILAkW1fbgxQ5mUmMiZFgLIV+FBNExI05xg=
 github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82/go.mod h1:lgjkn3NuSvDfVJdfcVVdX+jpBxNmX4rDAzaS45IcYoM=
 github.com/yudai/pp v2.0.1+incompatible/go.mod h1:PuxR/8QJ7cyCkFp/aUDS+JY727OFEZkTdatxwunjIkc=

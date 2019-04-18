@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"github.com/micro/go-micro"
-	hello "github.com/xuyiwenak/bambooRat/tree/master/modprojects/greeter"
 	"log"
+	hello "proto/hello"
 	"time"
 )
 
