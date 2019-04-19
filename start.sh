@@ -48,7 +48,7 @@ source ${MYLODER}/tools/golang_install.sh
 source ${MYLODER}/tools/framework_install.sh
 set -e
 
-# 解决部分被屏蔽的golang.org相关库, 具体查看github_list文件夹
+# 解决部分被屏蔽的golang.org相关库, 具体查看github_list文件夹，go mod不需要执行
 source ${MYLODER}/tools/goGFW.sh
 # 安装go pkg
 source ${MYLODER}/tools/goinstall.sh
