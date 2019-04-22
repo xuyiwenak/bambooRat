@@ -43,7 +43,9 @@ require (
 	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2 // indirect
 	github.com/emicklei/go-restful v2.8.1+incompatible
 	github.com/gin-gonic/gin v1.3.0
+	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
 	github.com/golang/protobuf v1.3.1
+	github.com/grpc-ecosystem/grpc-gateway v1.8.5
 	github.com/mattn/go-colorable v0.1.1 // indirect
 	github.com/micro/examples v0.1.0
 	github.com/micro/go-log v0.1.0
