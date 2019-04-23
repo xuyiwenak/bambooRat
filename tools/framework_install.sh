@@ -10,6 +10,8 @@ go get -v github.com/golang/protobuf/protoc-gen-go
 go get -v github.com/golang/protobuf/proto
 
 go get -v github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
+
+go get -v github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
 # download micro
 go get -v github.com/micro/micro
 

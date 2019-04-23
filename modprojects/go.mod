@@ -1,5 +1,29 @@
 module github.com/xuyiwenak/bambooRat/tree/master/modprojects
 
+go 1.12
+
+require (
+	github.com/99designs/gqlgen v0.7.1
+	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2 // indirect
+	github.com/emicklei/go-restful v2.8.1+incompatible
+	github.com/gin-gonic/gin v1.3.0
+	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
+	github.com/golang/protobuf v1.3.1
+	github.com/grpc-ecosystem/grpc-gateway v1.8.5
+	github.com/mattn/go-colorable v0.1.1 // indirect
+	github.com/micro/examples v0.1.0
+	github.com/micro/go-log v0.1.0
+	github.com/micro/go-micro v1.1.0
+	github.com/micro/go-web v0.6.0
+	github.com/micro/micro v0.22.0
+	github.com/vektah/gqlparser v1.1.0
+	golang.org/x/net v0.0.0-20190327214358-63eda1eb0650
+	google.golang.org/grpc v1.19.1
+	gopkg.in/fatih/pool.v2 v2.0.0 // indirect
+	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
+	k8s.io/utils v0.0.0-00010101000000-000000000000 // indirect
+)
+
 replace (
 	golang.org/x/build => github.com/golang/build v0.0.0-20190416225751-b5f252a0a7dd
 	golang.org/x/crypto => github.com/golang/crypto v0.0.0-20190411191339-88737f569e3a
@@ -34,28 +58,4 @@ replace (
 	k8s.io/kube-openapi => github.com/kubernetes/kube-openapi v0.0.0-20190401085232-94e1e7b7574c
 	k8s.io/utils => github.com/kubernetes/utils v0.0.0-20190308190857-21c4ce38f2a7
 	sigs.k8s.io/yaml => github.com/kubernetes-sigs/yaml v1.1.0
-)
-
-go 1.12
-
-require (
-	github.com/99designs/gqlgen v0.7.1
-	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2 // indirect
-	github.com/emicklei/go-restful v2.8.1+incompatible
-	github.com/gin-gonic/gin v1.3.0
-	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
-	github.com/golang/protobuf v1.3.1
-	github.com/grpc-ecosystem/grpc-gateway v1.8.5
-	github.com/mattn/go-colorable v0.1.1 // indirect
-	github.com/micro/examples v0.1.0
-	github.com/micro/go-log v0.1.0
-	github.com/micro/go-micro v1.1.0
-	github.com/micro/go-web v0.6.0
-	github.com/micro/micro v0.22.0
-	github.com/vektah/gqlparser v1.1.0
-	golang.org/x/net v0.0.0-20190327214358-63eda1eb0650
-	google.golang.org/grpc v1.19.1
-	gopkg.in/fatih/pool.v2 v2.0.0 // indirect
-	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
-	k8s.io/utils v0.0.0-00010101000000-000000000000 // indirect
 )
