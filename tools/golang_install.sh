@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-go_url="https://studygolang.com/dl/golang/go1.12.src.tar.gz"
+go_url="https://studygolang.com/dl/golang/go1.12.4.src.tar.gz"
 
 if [[ -d ${GOROOT}/src ]]; then
     echo "go sourcecode has been installed!"
