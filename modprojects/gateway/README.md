@@ -61,16 +61,22 @@ Because the default client/server have been replaced we can just run as usual
 
 ```
 
-# GRPC Gateway
+# GRPC Gateway  
 gateway目录主要处理url访问的请求，通过grpc转发给对应的业务greeter，并返回相对应的结果。
+![grpc-gateway的架构介绍](https://docs.google.com/drawings/d/12hp4CPqrNPFhattL_cIoJptFvlAqm5wLQ0ggqI5mkCg/pub?w=749&amp;h=370)
+项目代码参考[grpc-ecosystem/grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway).    
+这部分依赖三个库
+- protoc-gen-grpc-gateway  
+- protoc-gen-grpc-swagger  
+- protoc-gen-go
 
-This directory contains a grpc gateway generated using [grpc-ecosystem/grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway).
+这三个目录在[tools/framework_install.sh](https://github.com/xuyiwenak/bambooRat/tree/master/tools/framework_install.sh), 
+该脚本已经安装过，可以前往GOBIN目录查看，确定安装成功后  
+
 
 Services written with [micro/go-grpc](https://github.com/micro/go-grpc) are fully compatible with the grpc-gateway and any other 
 grpc services.
 
-Go to [grpc-ecosystem/grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway) for details on how to generate gateways. We 
-have generated the gateway from the same proto as the greeter server but with additional options for the gateway.
 
 ## Usage
 
