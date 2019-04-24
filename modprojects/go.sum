@@ -603,6 +603,7 @@ github.com/micro/cli v0.1.0/go.mod h1:jRT9gmfVKWSS6pkKcXQ8YhUyj6bzwxK8Fp5b0Y7qNn
 github.com/micro/examples v0.0.0-20190130075939-4c88706279b7/go.mod h1:kAtxC8sjgEmhvistg+9GLxPiI/80SYSAMXObHcs1CFw=
 github.com/micro/examples v0.1.0 h1:tW/g/rqLy/K/M2ZTvRLPjG3BHW0dlF9TqQ2MtJns5/E=
 github.com/micro/examples v0.1.0/go.mod h1:ye1KFooRPX3Iudk0QP+E4Yx3K855v1SqEn1a/G5Z+WY=
+github.com/micro/go-api v0.5.0 h1:sp8bbG/7nsyOTdB+8YlcjheiZ5iyNBws9Uje5ifkKhk=
 github.com/micro/go-api v0.5.0/go.mod h1:itWuEfGqJNM5q5hct5LWYFSxwPZWyngnrRpgMQJxlA0=
 github.com/micro/go-bot v0.1.0/go.mod h1:wodQnZJedhANtriMfhCJa07WK6UnZE2QFNNRlmL3NoI=
 github.com/micro/go-config v0.13.3/go.mod h1:fVecLls1kW+EJsrlkJYqUmVoJa1epSHhsPMDXppELx0=

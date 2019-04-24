@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "github.com/xuyiwenak/bambooRat/tree/master/modprojects/micro-api/API/proto/api.proto";
+
+service Example {
+    rpc Call(api.Request) returns(api.Response) {};
+}
+
+service Foo {
+    rpc Bar(api.Request) returns(api.Response) {};
+}

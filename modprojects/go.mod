@@ -12,6 +12,7 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway v1.8.5
 	github.com/mattn/go-colorable v0.1.1 // indirect
 	github.com/micro/examples v0.1.0
+	github.com/micro/go-api v0.5.0
 	github.com/micro/go-log v0.1.0
 	github.com/micro/go-micro v1.1.0
 	github.com/micro/go-web v0.6.0
