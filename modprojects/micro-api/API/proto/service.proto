@@ -1,6 +1,6 @@
 syntax = "proto3";
-
-import "github.com/xuyiwenak/bambooRat/tree/master/modprojects/micro-api/API/proto/api.proto";
+package api;
+import "api.proto";
 
 service Example {
     rpc Call(api.Request) returns(api.Response) {};
