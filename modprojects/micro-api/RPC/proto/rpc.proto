@@ -2,6 +2,7 @@ syntax = "proto3";
 
 // protoc --proto_path=$GOPATH/src --proto_path=.  --micro_out=. --go_out=.  rpc.proto
 // 类似的包依赖一定要保证proto_path内至少有一个路径和源proto文件在一个目录
+package rpc;
 
 message AliceRequest{
     string rev_msg = 1;
