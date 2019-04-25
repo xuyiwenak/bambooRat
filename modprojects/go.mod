@@ -1,4 +1,4 @@
-module github.com/xuyiwenak/bambooRat/tree/master/modprojects
+module github.com/xuyiwenak/bambooRat/modprojects
 
 go 1.12
 
@@ -26,6 +26,7 @@ require (
 )
 
 replace (
+	github.com/xuyiwenak/bambooRat/modprojects => /Users/tu/backend/mygopro/bambooRat/modprojects
 	golang.org/x/build => github.com/golang/build v0.0.0-20190416225751-b5f252a0a7dd
 	golang.org/x/crypto => github.com/golang/crypto v0.0.0-20190411191339-88737f569e3a
 	golang.org/x/exp => github.com/golang/exp v0.0.0-20190413192849-7f338f571082

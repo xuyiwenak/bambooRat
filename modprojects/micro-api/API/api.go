@@ -7,7 +7,7 @@ import (
 	"github.com/micro/go-log"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/errors"
-	proto "github.com/xuyiwenak/bambooRat/tree/master/modprojects/micro-api/API/proto"
+	proto "github.com/xuyiwenak/bambooRat/modprojects/micro-api/API/proto"
 	"strings"
 )
 
