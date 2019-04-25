@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+// protoc --proto_path=$GOPATH/src --proto_path=.  --micro_out=. --go_out=.  rpc.proto
+// 类似的包依赖一定要保证proto_path内至少有一个路径和源proto文件在一个目录
+
+message AliceRequest{
+    string rev_msg = 1;
+}
+message AliceResponse{
+    string send_msg = 1;
+    sint32 ret_code = 2;
+}
+
+message BobRequest{
+    string rev_msg = 1;
+}
+message BobResponse{
+    string send_msg = 1;
+    sint32 ret_code = 2;
+}
+
+service Alice {
+    rpc Sing(AliceRequest) returns(AliceResponse) {};
+}
+
+service Bob {
+    rpc Dance(BobRequest) returns(BobResponse) {};
+}
+
+
