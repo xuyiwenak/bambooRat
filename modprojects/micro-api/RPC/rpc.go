@@ -21,7 +21,7 @@ func (pb *Alice) Sing(ctx context.Context, req *proto.AliceRequest, rsp *proto.A
 	if len(rev_msg) == 0 {
 		return errors.BadRequest("go.micro.rpc.Alice", "参数不正确")
 	}
-	rsp.SendMsg = "congratulations to" + rev_msg
+	rsp.SendMsg = "congratulations to " + rev_msg
 	rsp.RetCode = 1
 	return nil
 }
@@ -31,16 +31,16 @@ func (pb *Bob) Dance(ctx context.Context, req *proto.BobRequest, rsp *proto.BobR
 	var rev_msg string = req.RevMsg
 
 	if len(rev_msg) == 0 {
-		return errors.BadRequest("go.micro.rpc.Bob", "参数不正确")
+		return errors.BadRequest("go.micro.api.Bob", "参数不正确")
 	}
-	rsp.SendMsg = "congratulations to" + rev_msg
+	rsp.SendMsg = "congratulations to " + rev_msg
 	rsp.RetCode = 1
 	return nil
 }
 
 func main() {
 	service := micro.NewService(
-		micro.Name("go.micro.rpc.demo"),
+		micro.Name("go.micro.api.demo"),
 	)
 
 	service.Init()
