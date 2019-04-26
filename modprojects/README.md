@@ -1,7 +1,6 @@
 # micro 项目
 ## 自动构建micro模板项目
-可以查看micro new的使用方法,查看[源码][micro/new源码]
-https://github.com/micro/micro/blob/master/new/new.go
+micro new的使用方法,查看[源码][micro/new源码]获取详细信息.
 ```
 micro new -h
 NAME:
