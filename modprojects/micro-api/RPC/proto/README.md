@@ -1,2 +1,2 @@
-protoc --proto_path=$GOPATH/src --proto_path=.  --micro_out=. --go_out=.  rpc.proto
+protoc --proto_path=$GOPATH/src:.  --micro_out=. --go_out=.  rpc.proto
 

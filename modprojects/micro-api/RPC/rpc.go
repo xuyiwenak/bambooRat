@@ -13,7 +13,7 @@ type Alice struct {
 type Bob struct {
 }
 
-func (ps *Alice) Sing(ctx context.Context, req *proto.AliceRequest, rsp *proto.AliceResponse) error {
+func (pb *Alice) Sing(ctx context.Context, req *proto.AliceRequest, rsp *proto.AliceResponse) error {
 	log.Logf("Alice.Sing rev request")
 
 	var rev_msg string = req.RevMsg
@@ -25,7 +25,7 @@ func (ps *Alice) Sing(ctx context.Context, req *proto.AliceRequest, rsp *proto.A
 	rsp.RetCode = 1
 	return nil
 }
-func (ps *Bob) Dance(ctx context.Context, req *proto.BobRequest, rsp *proto.BobResponse) error {
+func (pb *Bob) Dance(ctx context.Context, req *proto.BobRequest, rsp *proto.BobResponse) error {
 	log.Logf("Bob.Dance rev request")
 
 	var rev_msg string = req.RevMsg
