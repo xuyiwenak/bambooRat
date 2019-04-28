@@ -3,8 +3,8 @@ package db
 import (
 	"database/sql"
 	"fmt"
-	"github.com/micro-in-cn/tutorials/microservice-in-micro/part1/user-srv/basic/config"
 	"github.com/micro/go-log"
+	"user/user-srv/base/config"
 
 	"sync"
 )

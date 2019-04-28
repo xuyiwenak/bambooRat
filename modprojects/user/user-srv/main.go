@@ -1,28 +1,56 @@
 package main
 
 import (
+	"base"
+	"base/config"
+	"fmt"
+	"github.com/micro/cli"
 	"github.com/micro/go-log"
 	"github.com/micro/go-micro"
-	"user-srv/handler"
-	user "user-srv/proto/user"
-	"user-srv/subscriber"
+	"github.com/micro/go-micro/registry"
+	"github.com/micro/go-micro/registry/consul"
+	"handler"
+	"model"
+	proto "proto/user"
+	"time"
 )
 
 func main() {
-	// New Service
+
+	// 初始化配置、数据库等信息
+	base.Init()
+
+	// 使用consul注册
+	micReg := consul.NewRegistry(registryOptions)
+
+	// 新建服务
 	service := micro.NewService(
-		micro.Name("bambooRat.micro.sdk.srv.user"),
+		micro.Name("mu.micro.book.srv.user"),
+		micro.Registry(micReg),
 		micro.Version("latest"),
 	)
 
-	// Initialise service
-	service.Init()
+	// 服务初始化
+	service.Init(
+		micro.Action(func(c *cli.Context) {
+			// 初始化模型层
+			model.Init()
+			// 初始化handler
+			handler.Init()
+		}),
+	)
 
-	// Register Handler
-	user.RegisterExampleHandler(service.Server(), new(handler.Example))
+	// 注册服务
+	proto.RegisterUserHandler(service.Server(), new(handler.Service))
 
-	// Run service
+	// 启动服务
 	if err := service.Run(); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func registryOptions(ops *registry.Options) {
+	consulCfg := config.GetConsulConfig()
+	ops.Timeout = time.Second * 5
+	ops.Addrs = []string{fmt.Sprintf("%s:%d", consulCfg.GetHost(), consulCfg.GetPort())}
 }
