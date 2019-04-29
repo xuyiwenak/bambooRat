@@ -12,7 +12,9 @@ micro new user-srv --namespace=bambooRat.micro.sdk --alias=user --type=srv --gop
 
 - [配置环境](#configuration)
 - [依赖](#dependencies)
+- [测试](#test)
 - [具体使用](#usage)
+
 
 ## Configuration
 
@@ -51,7 +53,15 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
 CREATE USER 'guest_user'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
 GRANT ALL PRIVILEGES ON *.* TO 'guest_user'@'%';
 ```
-
+## test
+```
+# 启动consul 打开监听
+$ consul agent -dev
+# 执行
+$ go run main.go plugin.go
+```  
+查看进程状态  
+http://127.0.0.1:8500/ui/dc1/nodes/xuyiwen.local
 ## Usage
 
 Makefile负责把 main包编译成二进制文件 
@@ -69,5 +79,4 @@ make build
 ```
 make docker
 ```
-
 [framework_install.sh]: https://github.com/xuyiwenak/bambooRat/blob/master/tools/framework_install.sh
