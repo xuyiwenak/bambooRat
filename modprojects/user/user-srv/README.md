@@ -69,14 +69,14 @@ Makefile负责把 main包编译成二进制文件
 ```
 make build
 ```
-
+创建一个docker镜像
+```
+make docker
+```
 启动服务
 ```
 ./user-srv
 ```
 
-创建一个docker镜像
-```
-make docker
-```
+
 [framework_install.sh]: https://github.com/xuyiwenak/bambooRat/blob/master/tools/framework_install.sh
