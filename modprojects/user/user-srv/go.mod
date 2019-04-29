@@ -1,8 +1,9 @@
-module github.com/xuyiwenak/bambooRat/modprojects/user/user-srv
+module user-srv
 
 go 1.12
 
 replace (
+	github.com/testcontainers/testcontainer-go => github.com/testcontainers/testcontainers-go v0.0.0-20181115231424-8e868ca12c0f
 	github.com/xuyiwenak/bambooRat/modprojects/user/user-srv => ./
 	golang.org/x/build => github.com/golang/build v0.0.0-20190416225751-b5f252a0a7dd
 	golang.org/x/crypto => github.com/golang/crypto v0.0.0-20190411191339-88737f569e3a
@@ -41,8 +42,10 @@ replace (
 
 require (
 	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2 // indirect
-	github.com/golang/protobuf v1.3.1
+	github.com/go-sql-driver/mysql v1.4.1
 	github.com/mattn/go-colorable v0.1.1 // indirect
+	github.com/micro/cli v0.1.0
 	github.com/micro/go-log v0.1.0
 	github.com/micro/go-micro v1.1.0
+	github.com/xuyiwenak/bambooRat/modprojects/user/user-srv v0.0.0-00010101000000-000000000000
 )

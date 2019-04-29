@@ -1,17 +1,17 @@
 package main
 
 import (
-	"base"
-	"base/config"
 	"fmt"
 	"github.com/micro/cli"
 	"github.com/micro/go-log"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-micro/registry/consul"
-	"handler"
-	"model"
-	proto "proto/user"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/base"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/base/config"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/handler"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/model"
+	proto "github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/proto/user"
 	"time"
 )
 

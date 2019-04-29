@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"github.com/micro/go-log"
-	"user/user-srv/base/config"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/base/config"
 
 	"sync"
 )

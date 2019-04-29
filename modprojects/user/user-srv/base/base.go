@@ -1,8 +1,8 @@
 package base
 
 import (
-	"base/config"
-	"base/db"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/base/config"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/base/db"
 )
 
 func Init() {
