@@ -10,9 +10,9 @@ micro new user-srv --namespace=bambooRat.micro.sdk --alias=user --type=srv --gop
 
 ## Getting Started
 
-- [Configuration](#configuration)
-- [Dependencies](#dependencies)
-- [Usage](#usage)
+- [配置环境](#configuration)
+- [依赖](#dependencies)
+- [具体使用](#usage)
 
 ## Configuration
 
