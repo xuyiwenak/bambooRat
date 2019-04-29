@@ -25,7 +25,7 @@ func main() {
 
 	// 新建服务
 	service := micro.NewService(
-		micro.Name("mu.micro.book.srv.user"),
+		micro.Name("bambooRat.micro.sdk.user"),
 		micro.Registry(micReg),
 		micro.Version("latest"),
 	)
