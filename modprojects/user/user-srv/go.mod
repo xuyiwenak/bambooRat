@@ -41,10 +41,10 @@ replace (
 )
 
 require (
-	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2 // indirect
 	github.com/go-sql-driver/mysql v1.4.1
-	github.com/mattn/go-colorable v0.1.1 // indirect
+	github.com/golang/protobuf v1.3.1
 	github.com/micro/cli v0.1.0
+	github.com/micro/go-config v1.1.0
 	github.com/micro/go-log v0.1.0
 	github.com/micro/go-micro v1.1.0
 	github.com/xuyiwenak/bambooRat/modprojects/user/user-srv v0.0.0-00010101000000-000000000000
