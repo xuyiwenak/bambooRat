@@ -64,19 +64,18 @@ $ go run main.go plugin.go
 http://127.0.0.1:8500/ui/dc1/nodes/xuyiwen.local
 ## Usage
 
-Makefile负责把 main包编译成二进制文件 
-
+主要是以docker环境为主，为了方便docker获取编译时需要的依赖库，需要在当前项目下简历vendor目录，执行
 ```
-make build
+# go module 本身是支持vendor模式的，把需要的代码拷贝进来
+go mod vendor
 ```
-创建一个docker镜像
+制作docker镜像
 ```
-make docker
+docker build -t user-srv .
 ```
-启动服务
+运行docker镜像
 ```
-./user-srv
+docker run user-srv
 ```
-
 
 [framework_install.sh]: https://github.com/xuyiwenak/bambooRat/blob/master/tools/framework_install.sh
