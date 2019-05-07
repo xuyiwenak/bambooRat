@@ -75,7 +75,8 @@ docker build -t user-srv .
 ```
 运行docker镜像
 ```
-docker run user-srv
+# 养成加--rm的好习惯，不然container会越来越多
+docker run -it --rm --name demo user-srv
 ```
 
 [framework_install.sh]: https://github.com/xuyiwenak/bambooRat/blob/master/tools/framework_install.sh
