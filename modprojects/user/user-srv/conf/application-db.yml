@@ -1,6 +1,6 @@
 app:
   mysql:
     enabled: true
-    url: guest_user:123456@tcp(127.0.0.1:3306)/mysql
+    url: root:123456@tcp(127.0.0.1:3306)/mysql
     maxIdleConnection: 100
     maxOpenConnection: 130
