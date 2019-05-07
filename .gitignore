@@ -11,3 +11,5 @@ goprojects/src/google.golang.org/*
 goprojects/share/man/man1/socat.1
 goprojects/bin/*
 goprojects/bin/!protoc
+modprojects/user/user-srv/user-srv
+**/vendor
