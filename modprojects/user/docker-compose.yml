@@ -1,0 +1,26 @@
+version: '3'
+services:
+  user-srv:
+    build: ./user-srv
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+    depends_on:
+      - mysql
+    links:
+      - mysql
+
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_USER: 'evan'
+      MYSQL_PASS: '123456'
+
+    volumes:
+      - "${HOME}/mysql/data:/var/lib/mysql"
+      - "${HOME}/mysql/conf:/mysql/conf"
+      - "${HOME}/mysql/logs:/logs"
+    ports:
+      - "3306:33060"
