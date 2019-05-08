@@ -14,5 +14,5 @@ micro new user-srv --namespace=bambooRat.micro.sdk --alias=user --type=srv --gop
 ```  
 docker 启动命令
 ```
-docker run -p 3306:3306 --name mysql -v $HOME/mysql/conf:/etc/mysql/conf.d -v $HOME/mysql/logs:/logs -v $HOME/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+docker run -p 3306:3306 --rm --name mysql -v $HOME/mysql/conf:/etc/mysql/conf.d -v $HOME/mysql/logs:/logs -v $HOME/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 ```
