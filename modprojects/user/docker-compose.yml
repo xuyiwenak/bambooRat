@@ -12,7 +12,8 @@ services:
       - mysql
 
   mysql:
-    image: mysql
+    network_mode: "host"
+    image: "mysql:latest"
     environment:
       MYSQL_ROOT_PASSWORD: "123456"
       MYSQL_USER: 'evan'
