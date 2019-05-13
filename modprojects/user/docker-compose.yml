@@ -7,13 +7,14 @@ services:
     volumes:
       - .:/code
     depends_on:
-      - mysql
+      - mysql_db
     links:
-      - mysql
+      - mysql_db
 
-  mysql:
-    network_mode: "host"
+  mysql_db:
     image: "mysql:latest"
+    restart: always
+    #command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: "123456"
       MYSQL_USER: 'evan'
@@ -23,5 +24,30 @@ services:
       - "${HOME}/mysql/data:/var/lib/mysql"
       - "${HOME}/mysql/conf:/mysql/conf"
       - "${HOME}/mysql/logs:/logs"
+      - "${HOME}/mysql/my.cnf:/etc/my.cnf"
+  consul1:
+    image: consul
+    container_name: node1
+    command: agent -server -bootstrap-expect=3 -node=node1 -bind=0.0.0.0 -client=0.0.0.0 -datacenter=dc1
+  consul2:
+    image: consul
+    container_name: node2
+    command: agent -server -retry-join=node1 -node=node2 -bind=0.0.0.0 -client=0.0.0.0 -datacenter=dc1
+    depends_on:
+        - consul1
+  consul3:
+    image: consul
+    container_name: node3
+    command: agent -server -retry-join=node1 -node=node3 -bind=0.0.0.0 -client=0.0.0.0 -datacenter=dc1
+    depends_on:
+      - consul1
+  consul4:
+    image: consul
+    container_name: node4
+    command: agent -retry-join=node1 -node=ndoe4 -bind=0.0.0.0 -client=0.0.0.0 -datacenter=dc1 -ui
     ports:
-      - "3306:33060"
+      - 8500:8500
+    depends_on:
+      - consul2
+      - consul3
+
