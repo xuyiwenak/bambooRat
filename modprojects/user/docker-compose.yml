@@ -17,9 +17,6 @@ services:
     #command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: "123456"
-      MYSQL_USER: 'evan'
-      MYSQL_PASS: '123456'
-
     volumes:
       - "${HOME}/mysql/data:/var/lib/mysql"
       - "${HOME}/mysql/conf:/mysql/conf"
