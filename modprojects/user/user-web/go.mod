@@ -1,4 +1,4 @@
-module user-srv
+module user-web
 
 go 1.12
 
@@ -7,7 +7,7 @@ replace (
 	github.com/xuyiwenak/bambooRat/modprojects/user/user-web => ./
 	golang.org/x/build => github.com/golang/build v0.0.0-20190416225751-b5f252a0a7dd
 	golang.org/x/crypto => github.com/golang/crypto v0.0.0-20190411191339-88737f569e3a
-	golang.org/x/exp => github.com/golang/exp v0.0.0-20190413192849-7f338f571082
+	golang.org/x/exp => github.com/golang/exp v0.0.0-20190426190305-956cc1757749
 	golang.org/x/image => github.com/golang/image v0.0.0-20190417020941-4e30a6eb7d9a
 	golang.org/x/lint => github.com/golang/lint v0.0.0-20190409202823-959b441ac422
 	golang.org/x/mobile => github.com/golang/mobile v0.0.0-20190415191353-3e0bab5405d6

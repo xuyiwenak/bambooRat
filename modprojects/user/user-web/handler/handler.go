@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"github.com/micro/go-log"
 	"github.com/micro/go-micro/client"
-	us "github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/proto/user"
+	us "github.com/xuyiwenak/bambooRat/modprojects/user/user-web/proto/user"
 	"net/http"
 	"time"
 )
