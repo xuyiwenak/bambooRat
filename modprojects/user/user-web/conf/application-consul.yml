@@ -1,0 +1,5 @@
+app:
+  consul:
+    enabled: true
+    host: consul4
+    port: 8500
