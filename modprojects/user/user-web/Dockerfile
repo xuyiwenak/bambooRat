@@ -12,4 +12,4 @@ WORKDIR /root/user-web
 
 COPY --from=0 /go/src/user-web .
 
-CMD ["./user-srv"]
+CMD ["./user-web"]

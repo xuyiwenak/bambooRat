@@ -50,4 +50,5 @@ require (
 	go.etcd.io/bbolt v1.3.2 // indirect
 	gopkg.in/fatih/pool.v2 v2.0.0 // indirect
 	k8s.io/utils v0.0.0-00010101000000-000000000000 // indirect
+	github.com/xuyiwenak/bambooRat/modprojects/user/user-srv latest
 )
