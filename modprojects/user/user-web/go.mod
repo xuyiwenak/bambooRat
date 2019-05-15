@@ -42,6 +42,7 @@ replace (
 )
 
 require (
+	github.com/99designs/gqlgen v0.7.2 // indirect
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/micro/cli v0.1.0
 	github.com/micro/go-config v1.1.0
@@ -49,5 +50,6 @@ require (
 	github.com/micro/go-micro v1.1.0
 	github.com/micro/go-web v1.0.0
 	github.com/micro/micro v1.1.1
-	github.com/xuyiwenak/bambooRat/modprojects/user/user-srv v0.0.0-20190515084416-ea6c9c61f9e8
+	github.com/xuyiwenak/bambooRat/modprojects/user/user-srv v0.0.0-20190515091715-6502ff6dc6a2
+	k8s.io/utils v0.0.0-20190204185745-a326ccf4f02b // indirect
 )
