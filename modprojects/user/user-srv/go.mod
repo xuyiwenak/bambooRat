@@ -47,5 +47,8 @@ require (
 	github.com/micro/go-config v1.1.0
 	github.com/micro/go-log v0.1.0
 	github.com/micro/go-micro v1.1.0
-	github.com/xuyiwenak/bambooRat/modprojects/user/user-srv v0.0.0-00010101000000-000000000000
+	go.etcd.io/bbolt v1.3.2 // indirect
+	gopkg.in/fatih/pool.v2 v2.0.0 // indirect
+	k8s.io/utils v0.0.0-00010101000000-000000000000 // indirect
+	github.com/xuyiwenak/bambooRat/modprojects/user/user-srv v0.0.0-20190515084416-ea6c9c61f9e8
 )

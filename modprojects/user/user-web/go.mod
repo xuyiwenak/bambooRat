@@ -49,5 +49,5 @@ require (
 	github.com/micro/go-micro v1.1.0
 	github.com/micro/go-web v1.0.0
 	github.com/micro/micro v1.1.1
-	github.com/xuyiwenak/bambooRat/modprojects/user/user-srv v0.0.0-20190515084228-73111625f68e
+	github.com/xuyiwenak/bambooRat/modprojects/user/user-srv v0.0.0-20190515084416-ea6c9c61f9e8
 )
