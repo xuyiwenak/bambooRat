@@ -1,4 +1,4 @@
-module user-web
+module github.com/xuyiwenak/bambooRat/modprojects/user/user-web
 
 go 1.12
 
@@ -49,5 +49,4 @@ require (
 	github.com/micro/go-micro v1.1.0
 	github.com/micro/go-web v1.0.0
 	github.com/micro/micro v1.1.1
-	github.com/xuyiwenak/bambooRat/modprojects/user/user-web v0.0.0-00010101000000-000000000000
 )
