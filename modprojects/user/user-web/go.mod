@@ -7,7 +7,8 @@ replace (
 	github.com/xuyiwenak/bambooRat/modprojects/user/user-web => ./
 	golang.org/x/build => github.com/golang/build v0.0.0-20190416225751-b5f252a0a7dd
 	golang.org/x/crypto => github.com/golang/crypto v0.0.0-20190411191339-88737f569e3a
-	golang.org/x/exp => github.com/golang/exp v0.0.0-20190426190305-956cc1757749
+	golang.org/x/exp => github.com/golang/exp v0.0.0-20190510132918-efd6b22b2522
+	golang.org/x/exp/errors => github.com/golang/exp/errors v0.0.0-20190510132918-efd6b22b2522
 	golang.org/x/image => github.com/golang/image v0.0.0-20190417020941-4e30a6eb7d9a
 	golang.org/x/lint => github.com/golang/lint v0.0.0-20190409202823-959b441ac422
 	golang.org/x/mobile => github.com/golang/mobile v0.0.0-20190415191353-3e0bab5405d6
@@ -42,10 +43,11 @@ replace (
 
 require (
 	github.com/go-sql-driver/mysql v1.4.1
-	github.com/golang/protobuf v1.3.1
 	github.com/micro/cli v0.1.0
 	github.com/micro/go-config v1.1.0
 	github.com/micro/go-log v0.1.0
 	github.com/micro/go-micro v1.1.0
+	github.com/micro/go-web v1.0.0
+	github.com/micro/micro v1.1.1
 	github.com/xuyiwenak/bambooRat/modprojects/user/user-web v0.0.0-00010101000000-000000000000
 )
