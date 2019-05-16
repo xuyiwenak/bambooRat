@@ -23,3 +23,7 @@
  ```
  docker-compose restart user-srv
  ```
+ 如果需要关闭所有服务执行
+ ```
+ docker-compose down
+ ```
