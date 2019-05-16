@@ -21,7 +21,7 @@ type Error struct {
 }
 
 func Init() {
-	serviceClient = us.NewUserService("mu.micro.book.srv.user", client.DefaultClient)
+	serviceClient = us.NewUserService("bambooRat.micro.sdk.user", client.DefaultClient)
 }
 
 // Login 登录入口
