@@ -60,8 +60,8 @@ $ consul agent -dev
 # 执行
 $ go run main.go plugin.go
 ```  
-查看进程状态  
-http://127.0.0.1:8500/ui/dc1/nodes/xuyiwen.local
+查看consul进程状态  
+http://localhost:8500/ui/dc1/services
 ## Usage
 
 主要是以docker环境为主，为了方便docker获取编译时需要的依赖库，需要在当前项目下简历vendor目录，执行
@@ -76,7 +76,7 @@ docker build -t user-srv .
 运行docker镜像
 ```
 # 养成加--rm的好习惯，不然container会越来越多
-docker run -it --rm --name demo user-srv
+docker run -it --rm --name user-srv user-srv
 ```
 
 [framework_install.sh]: https://github.com/xuyiwenak/bambooRat/blob/master/tools/framework_install.sh
