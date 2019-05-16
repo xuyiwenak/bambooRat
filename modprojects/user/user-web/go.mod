@@ -1,4 +1,4 @@
-module github.com/xuyiwenak/bambooRat/modprojects/user/user-web
+module user-web
 
 go 1.12
 
@@ -42,35 +42,12 @@ replace (
 )
 
 require (
-	cloud.google.com/go v0.37.2 // indirect
-	contrib.go.opencensus.io/exporter/ocagent v0.4.9 // indirect
-	github.com/Azure/azure-sdk-for-go v26.7.0+incompatible // indirect
-	github.com/Azure/go-autorest v11.7.0+incompatible // indirect
-	github.com/aliyun/alibaba-cloud-sdk-go v0.0.0-20190329064014-6e358769c32a // indirect
-	github.com/aws/aws-sdk-go v1.19.5 // indirect
-	github.com/coreos/go-systemd v0.0.0-20190321100706-95778dfbb74e // indirect
-	github.com/denverdino/aliyungo v0.0.0-20190325014556-e961d750c214 // indirect
-	github.com/digitalocean/godo v1.10.0 // indirect
 	github.com/go-sql-driver/mysql v1.4.1
-	github.com/gophercloud/gophercloud v0.0.0-20190328150603-33e54f40ffcf // indirect
-	github.com/gopherjs/gopherjs v0.0.0-20190328170749-bb2674552d8f // indirect
-	github.com/hashicorp/mdns v1.0.1 // indirect
-	github.com/jarcoal/httpmock v1.0.1 // indirect
-	github.com/joyent/triton-go v0.0.0-20190112182421-51ffac552869 // indirect
 	github.com/micro/cli v0.1.0
 	github.com/micro/go-config v1.1.0
 	github.com/micro/go-log v0.1.0
 	github.com/micro/go-micro v1.1.0
 	github.com/micro/go-web v1.0.0
-	github.com/opentracing/opentracing-go v1.1.0 // indirect
-	github.com/prometheus/procfs v0.0.0-20190328153300-af7bedc223fb // indirect
-	github.com/softlayer/softlayer-go v0.0.0-20190107163317-a40f6fdd659f // indirect
-	github.com/vmware/govmomi v0.20.0 // indirect
-	github.com/vmware/vic v1.5.2 // indirect
 	github.com/xuyiwenak/bambooRat/modprojects/user/user-srv v0.0.0-20190515091715-6502ff6dc6a2
-	golang.org/x/net v0.0.0-20190328230028-74de082e2cca // indirect
-	google.golang.org/appengine v1.5.0 // indirect
-	google.golang.org/genproto v0.0.0-20190327125643-d831d65fe17d // indirect
-	k8s.io/api v0.0.0-20190327184913-92d2ee7fc726 // indirect
-	k8s.io/utils v0.0.0-20190204185745-a326ccf4f02b // indirect
+	github.com/xuyiwenak/bambooRat/modprojects/user/user-web v0.0.0-00010101000000-000000000000
 )

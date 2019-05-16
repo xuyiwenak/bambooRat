@@ -2,14 +2,18 @@ version: '3'
 services:
   user-srv:
     build: ./user-srv
-    ports:
-      - "5000:5000"
     volumes:
       - .:/code
     depends_on:
       - mysql_db
     links:
       - mysql_db
+  user-web:
+    build: ./user-web
+    ports:
+      - "8088:8088"
+    volumes:
+      - .:/code
 
   mysql_db:
     image: "mysql:latest"

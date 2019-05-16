@@ -1,4 +1,4 @@
-module github.com/xuyiwenak/bambooRat/modprojects/user/user-srv
+module user-srv
 
 go 1.12
 
