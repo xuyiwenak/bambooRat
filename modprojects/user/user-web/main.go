@@ -24,7 +24,7 @@ func main() {
 	// 创建新服务
 	service := web.NewService(
 		// 后面两个web，第一个是指是web类型的服务，第二个是服务自身的名字
-		web.Name("mu.micro.book.web.user"),
+		web.Name("bambooRat.micro.web.user"),
 		web.Version("latest"),
 		web.Registry(micReg),
 		web.Address(":8088"),
