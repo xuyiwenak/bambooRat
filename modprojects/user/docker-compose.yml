@@ -23,9 +23,8 @@ services:
       MYSQL_ROOT_PASSWORD: "123456"
     volumes:
       - "${HOME}/mysql/data:/var/lib/mysql"
-      - "${HOME}/mysql/conf:/mysql/conf"
-      - "${HOME}/mysql/logs:/logs"
-      - "${HOME}/mysql/my.cnf:/etc/my.cnf"
+      - "${HOME}/mysql/conf/my.cnf:/etc/mysql/my.cnf"
+      - "${HOME}/mysql/logs:/mysql/logs"
   consul1:
     image: consul
     container_name: node1
