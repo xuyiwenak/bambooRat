@@ -22,8 +22,37 @@
  则等依赖的容器启动后，再手动重启对应的服务即可。
  ```
  docker-compose restart user-srv
+ # 或者重新执行
+  docker-compose up -d
  ```
  如果需要关闭所有服务执行
  ```
  docker-compose down
+ ```
+ ## 构建mysql表
+ 把sql脚本拷贝到容器内的某个文件下，以home为例
+  ```
+  docker cp scripts/schema.sql <container name>:/home
+  ```
+ 进入容器,执行脚本,创建数据库和表
+ ```
+ docker exec -it <container name> bash
+ mysql -uroot -p -D micro_user</home/schema.sql
+ ```
+ 设置数据库权限配置
+ ```
+ # 先进入数据库
+ mysql -uroot -p
+ # 执行sql语句
+select user,host,authentication_string from mysql.user; 
+ ```
+ 为root用户分配远程权限
+ ```
+ grant all PRIVILEGES on *.* to root@'%' WITH GRANT OPTION;
+ ```
+ 由于Mysql5.6以上的版本修改了Password算法，这里还需要更新密码算法，方便远程连接
+ ```
+ ALTER user 'root'@'%' IDENTIFIED BY '123456' PASSWORD EXPIRE NEVER;
+ ALTER user 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+ FLUSH PRIVILEGES;
  ```
