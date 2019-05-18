@@ -23,8 +23,6 @@ services:
       MYSQL_ROOT_PASSWORD: "123456"
     volumes:
       - "${HOME}/mysql/data:/var/lib/mysql"
-      - "${HOME}/mysql/conf:/etc/mysql"
-      - "${HOME}/mysql/run/mysqld.sock:/var/run/mysqld/mysqld.sock"
     ports:
       - "3306:3306"
   consul1:
