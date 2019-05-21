@@ -1,6 +1,7 @@
 app:
   mysql:
     enabled: true
-    url: root:123456@tcp(mysql_db:3306)/micro_user
+    #url: root:123456@tcp(mysql_db:3306)/micro_user # docker 测试环境
+    url: root:123456@tcp(127.0.0.1:3306)/micro_user # 本地测试
     maxIdleConnection: 100
     maxOpenConnection: 130
