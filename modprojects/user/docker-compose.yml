@@ -14,7 +14,12 @@ services:
       - "8088:8088"
     volumes:
       - .:/code
-
+  user-auth:
+    build: ./user-auth
+    depends_on:
+      - redis
+    links:
+      - redis
   mysql_db:
     image: "mysql:latest"
     restart: always
