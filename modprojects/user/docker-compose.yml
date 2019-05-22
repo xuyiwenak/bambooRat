@@ -25,6 +25,10 @@ services:
       - "${HOME}/mysql/data:/var/lib/mysql"
     ports:
       - "3306:3306"
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
   consul1:
     image: consul
     container_name: node1

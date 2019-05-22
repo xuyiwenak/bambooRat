@@ -7,10 +7,10 @@ import (
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-micro/registry/consul"
 	"github.com/micro/go-web"
-	"github.com/xuyiwenak/bambooRat/modprojects/user/user-web/base"
-	"github.com/xuyiwenak/bambooRat/modprojects/user/user-web/base/config"
-	"github.com/xuyiwenak/bambooRat/modprojects/user/user-web/handler"
 	"time"
+	"user/base"
+	"user/base/config"
+	"user/user-web/handler"
 )
 
 func main() {

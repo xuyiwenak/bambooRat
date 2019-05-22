@@ -7,12 +7,12 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-micro/registry/consul"
-	"github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/base"
-	"github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/base/config"
-	"github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/handler"
-	"github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/model"
-	proto "github.com/xuyiwenak/bambooRat/modprojects/user/user-srv/proto/user"
 	"time"
+	"user/base"
+	"user/base/config"
+	"user/user-srv/handler"
+	"user/user-srv/model"
+	proto "user/user-srv/proto/user"
 )
 
 func main() {
@@ -25,7 +25,7 @@ func main() {
 
 	// 新建服务
 	service := micro.NewService(
-		micro.Name("bambooRat.micro.sdk.user"),
+		micro.Name("bambooRat.micro.srv.user"),
 		micro.Registry(micReg),
 		micro.Version("latest"),
 	)

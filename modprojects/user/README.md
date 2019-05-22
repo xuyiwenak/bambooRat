@@ -5,9 +5,9 @@
 
 |服务|命名空间|说明|---|
 |---|---|---|---|
-|接入层API|bambooRat.micro.sdk.web|负责代理所有**bambooRat.micro.sdk.web**下游的web应用，比如**bambooRat.micro.sdk.web.user**等|---|
-|用户web|bambooRat.micro.sdk.web.user|接收API下放的路由为/user请求|---|
-|用户服务|bambooRat.micro.sdk.srv.user|对架构内应用提供user查询服务|---|  
+|接入层API|bambooRat.micro.web|负责代理所有**bambooRat.micro.web**下游的web应用，比如**bambooRat.micro.web.user**等|---|
+|用户web|bambooRat.micro.web.user|接收API下放的路由为/user请求|---|
+|用户服务|bambooRat.micro.srv.user|对架构内应用提供user查询服务|---|  
  
  ##docker构建微服务方式
  为了方便微服务的管理，单机环境目前由docker-compose做容器编排，降低开发成本，具体步骤如下：

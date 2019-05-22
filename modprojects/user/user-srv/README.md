@@ -18,7 +18,7 @@ micro new user-srv --namespace=bambooRat.micro.sdk --alias=user --type=srv --gop
 
 ## Configuration
 
-- FQDN: bambooRat.micro.sdk.srv.user
+- FQDN: bambooRat.micro.srv.user
 - Type: srv
 - Alias: user
 
