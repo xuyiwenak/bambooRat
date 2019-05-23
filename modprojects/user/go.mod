@@ -4,7 +4,6 @@ go 1.12
 
 replace (
 	github.com/testcontainers/testcontainer-go => github.com/testcontainers/testcontainers-go v0.0.0-20181115231424-8e868ca12c0f
-	github.com/xuyiwenak/bambooRat/modprojects/user => ./
 	golang.org/x/build => github.com/golang/build v0.0.0-20190416225751-b5f252a0a7dd
 	golang.org/x/crypto => github.com/golang/crypto v0.0.0-20190411191339-88737f569e3a
 	golang.org/x/exp => github.com/golang/exp v0.0.0-20190413192849-7f338f571082
