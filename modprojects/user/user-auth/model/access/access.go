@@ -3,8 +3,8 @@ package access
 import (
 	"fmt"
 	r "github.com/go-redis/redis"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/base/redis"
 	"sync"
-	"user/base/redis"
 )
 
 var (

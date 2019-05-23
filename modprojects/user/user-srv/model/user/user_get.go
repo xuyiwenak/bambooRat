@@ -2,7 +2,7 @@ package user
 
 import (
 	"github.com/micro/go-log"
-	"user/base/db"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/base/db"
 	proto "user/user-srv/proto/user"
 )
 

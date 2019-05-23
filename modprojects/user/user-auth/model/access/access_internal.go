@@ -3,8 +3,8 @@ package access
 import (
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
 	"time"
-	"user/base/config"
 )
 
 // createTokenClaims Claims

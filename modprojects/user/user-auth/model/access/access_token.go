@@ -5,8 +5,8 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/micro/go-log"
 	"github.com/micro/go-micro/broker"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
 	"time"
-	"user/base/config"
 )
 
 var (
