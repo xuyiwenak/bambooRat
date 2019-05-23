@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 	"github.com/micro/go-log"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
 	"sync"
-	"user/base/config"
 )
 
 var (

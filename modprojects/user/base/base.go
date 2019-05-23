@@ -1,9 +1,9 @@
 package base
 
 import (
-	"user/base/config"
-	"user/base/db"
-	"user/base/redis"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/base/db"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/base/redis"
 )
 
 func Init() {
