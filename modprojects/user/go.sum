@@ -967,8 +967,8 @@ github.com/xanzy/ssh-agent v0.2.1/go.mod h1:mLlQY/MoOhWBj+gOGMQkOeiEvkx+8pJSI+0B
 github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 h1:eY9dn8+vbi4tKz5Qo6v2eYzo7kUS51QINcR5jNpbZS8=
 github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q53MR2AWcXfiuqkDkRtnGDLqkBTpCHuJHxtU=
 github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:aYKd//L2LvnjZzWKhF00oedf4jCCReLcmhLdhm1A27Q=
-github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523093417-1c2d192346cc h1:EuBlJJyAHXmgU1I9En2HRdSwVwPVg+QjKfm7VEF3UhM=
-github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523093417-1c2d192346cc/go.mod h1:reXNREWhtN9YDgjwwG1/OL7TqXoZ83+ObUEeQIMHXaU=
+github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523102217-ffa3e6ce8c80 h1:4EyGIcMZxOlmkGRF3uuTfhO/sFyRW5tvtx+WDTgu/qw=
+github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523102217-ffa3e6ce8c80/go.mod h1:reXNREWhtN9YDgjwwG1/OL7TqXoZ83+ObUEeQIMHXaU=
 github.com/yudai/gojsondiff v1.0.0/go.mod h1:AY32+k2cwILAkW1fbgxQ5mUmMiZFgLIV+FBNExI05xg=
 github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82/go.mod h1:lgjkn3NuSvDfVJdfcVVdX+jpBxNmX4rDAzaS45IcYoM=
 github.com/yudai/pp v2.0.1+incompatible/go.mod h1:PuxR/8QJ7cyCkFp/aUDS+JY727OFEZkTdatxwunjIkc=

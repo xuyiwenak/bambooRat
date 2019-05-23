@@ -50,7 +50,7 @@ require (
 	github.com/micro/go-log v0.1.0
 	github.com/micro/go-micro v1.1.0
 	github.com/micro/go-web v1.0.0
-	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523093417-1c2d192346cc
+	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523102217-ffa3e6ce8c80
 	go.etcd.io/bbolt v1.3.2 // indirect
 	gopkg.in/fatih/pool.v2 v2.0.0 // indirect
 	k8s.io/utils v0.0.0-00010101000000-000000000000 // indirect
