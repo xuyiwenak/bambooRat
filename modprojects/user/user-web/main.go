@@ -7,9 +7,9 @@ import (
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-micro/registry/consul"
 	"github.com/micro/go-web"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/base"
+	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
 	"time"
-	"user/base"
-	"user/base/config"
 	"user/user-web/handler"
 )
 
