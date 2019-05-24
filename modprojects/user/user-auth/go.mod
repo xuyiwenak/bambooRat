@@ -51,5 +51,5 @@ require (
 	github.com/micro/cli v0.1.0
 	github.com/micro/go-log v0.1.0
 	github.com/micro/go-micro v1.2.0
-	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523120219-8b8c8f952045
+	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523140807-02e1a2e259d5
 )

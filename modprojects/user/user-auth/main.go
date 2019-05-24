@@ -9,10 +9,10 @@ import (
 	"github.com/micro/go-micro/registry/consul"
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base"
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
-	"github.com/xuyiwenak/bambooRat/modprojects/user/user-auth/handler"
-	"github.com/xuyiwenak/bambooRat/modprojects/user/user-auth/model"
-	s "github.com/xuyiwenak/bambooRat/modprojects/user/user-auth/proto/auth"
 	"time"
+	"user/user-auth/handler"
+	"user/user-auth/model"
+	s "user/user-auth/proto/auth"
 )
 
 func main() {
