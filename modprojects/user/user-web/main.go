@@ -10,7 +10,7 @@ import (
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base"
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
 	"time"
-	"user/user-web/handler"
+	"user-web/handler"
 )
 
 func main() {

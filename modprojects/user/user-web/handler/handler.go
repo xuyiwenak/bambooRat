@@ -3,13 +3,12 @@ package handler
 import (
 	"context"
 	"encoding/json"
-	"github.com/micro/go-log"
+	"github.com/go-log/log"
+	"github.com/micro/go-micro/client"
+	auth "github.com/xuyiwenak/bambooRat/modprojects/user/proto/auth"
+	us "github.com/xuyiwenak/bambooRat/modprojects/user/proto/user"
 	"net/http"
 	"time"
-
-	"github.com/micro/go-micro/client"
-	auth "user/user-auth/proto/auth"
-	us "user/user-srv/proto/user"
 )
 
 var (

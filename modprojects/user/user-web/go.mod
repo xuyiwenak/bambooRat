@@ -18,7 +18,7 @@ replace (
 	golang.org/x/text => github.com/golang/text v0.3.0
 	golang.org/x/time => github.com/golang/time v0.0.0-20190308202827-9d24e82272b4
 	golang.org/x/tools => github.com/golang/tools v0.0.0-20190417005754-4ca4b55e2050
-	golang.org/x/xerrors => github.com/golang/xerrors v0.0.0-20190410155217-1f06c39b4373
+	golang.org/x/xerrors => github.com/golang/xerrors v0.0.0-20190513163551-3ee3066db522
 	google.golang.org/api => github.com/googleapis/google-api-go-client v0.3.2
 	google.golang.org/appengine => github.com/golang/appengine v1.5.0
 	google.golang.org/genproto => github.com/google/go-genproto v0.0.0-20190415143225-d1146b9035b9
@@ -33,11 +33,22 @@ replace (
 	k8s.io/api => github.com/kubernetes/api v0.0.0-20190416052506-9eb4726e83e4
 	k8s.io/apimachinery => github.com/kubernetes/apimachinery v0.0.0-20190416092415-3370b4aef5d6
 	k8s.io/client-go => github.com/kubernetes/client-go v11.0.0+incompatible
+	k8s.io/gengo => github.com/kubernetes/gengo v0.0.0-20190327210449-e17681d19d3a
 	k8s.io/klog => github.com/simonpasquier/klog-gokit v0.1.0
 	k8s.io/kube-openapi => github.com/kubernetes/kube-openapi v0.0.0-20190401085232-94e1e7b7574c
 	k8s.io/utils => github.com/kubernetes/utils v0.0.0-20190308190857-21c4ce38f2a7
-	k8s.io/gengo => github.com/kubernetes/gengo latest
+	sigs.k8s.io/structured-merge-diff => github.com/kubernetes-sigs/structured-merge-diff v0.0.0-20190525122527-15d366b2352e
 	sigs.k8s.io/yaml => github.com/kubernetes-sigs/yaml v1.1.0
-	sigs.k8s.io/structured-merge-diff => github.com/kubernetes-sigs/structured-merge-diff latest
 
+)
+
+require (
+	github.com/go-log/log v0.1.0
+	github.com/go-sql-driver/mysql v1.4.1
+	github.com/micro/cli v0.1.0
+	github.com/micro/go-log v0.1.0
+	github.com/micro/go-micro v1.2.0
+	github.com/micro/go-web v0.6.0
+	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190527083736-6607bad3e7c3
+	github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190527103113-ee33b324dac4
 )
