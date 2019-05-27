@@ -974,10 +974,8 @@ github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c/go.mod h1:lB8K/P019DLNhe
 github.com/xdg/stringprep v1.0.0/go.mod h1:Jhud4/sHMO4oL310DaZAKk9ZaJ08SJfe+sJh0HrGL1Y=
 github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q53MR2AWcXfiuqkDkRtnGDLqkBTpCHuJHxtU=
 github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:aYKd//L2LvnjZzWKhF00oedf4jCCReLcmhLdhm1A27Q=
-github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523120219-8b8c8f952045 h1:rZ4OoMtHv5OLsioaCPHBRymWpe/sUk1pbPG4uzImOB0=
-github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523120219-8b8c8f952045/go.mod h1:reXNREWhtN9YDgjwwG1/OL7TqXoZ83+ObUEeQIMHXaU=
-github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523140807-02e1a2e259d5 h1:zYMFRzAfKpvH572tAgnVYX6QLk9T2s55k1oAbBSB6R4=
-github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190523140807-02e1a2e259d5/go.mod h1:reXNREWhtN9YDgjwwG1/OL7TqXoZ83+ObUEeQIMHXaU=
+github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190524023150-aaf806aa7a39 h1:mcXqd+msdCkEIOsuf4Nmv+FpWTtn0MpzRJ+cD5FMI+U=
+github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190524023150-aaf806aa7a39/go.mod h1:reXNREWhtN9YDgjwwG1/OL7TqXoZ83+ObUEeQIMHXaU=
 github.com/yudai/gojsondiff v1.0.0/go.mod h1:AY32+k2cwILAkW1fbgxQ5mUmMiZFgLIV+FBNExI05xg=
 github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82/go.mod h1:lgjkn3NuSvDfVJdfcVVdX+jpBxNmX4rDAzaS45IcYoM=
 github.com/yudai/pp v2.0.1+incompatible/go.mod h1:PuxR/8QJ7cyCkFp/aUDS+JY727OFEZkTdatxwunjIkc=

@@ -4,8 +4,8 @@ import (
 	"context"
 	"github.com/micro/go-log"
 	"strconv"
-	"user/user-auth/model/access"
-	auth "user/user-auth/proto/auth"
+	"user-auth/model/access"
+	auth "user-auth/proto/auth"
 )
 
 var (

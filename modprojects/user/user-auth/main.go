@@ -10,9 +10,9 @@ import (
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base"
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
 	"time"
-	"user/user-auth/handler"
-	"user/user-auth/model"
-	s "user/user-auth/proto/auth"
+	"user-auth/handler"
+	"user-auth/model"
+	s "user-auth/proto/auth"
 )
 
 func main() {
