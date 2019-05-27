@@ -3,7 +3,7 @@ package user
 import (
 	"fmt"
 	"sync"
-	proto "user/user-srv/proto/user"
+	proto "user-srv/proto/user"
 )
 
 var (

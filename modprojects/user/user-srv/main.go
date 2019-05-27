@@ -10,9 +10,9 @@ import (
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base"
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
 	"time"
-	"user/user-srv/handler"
-	"user/user-srv/model"
-	proto "user/user-srv/proto/user"
+	"user-srv/handler"
+	"user-srv/model"
+	proto "user-srv/proto/user"
 )
 
 func main() {

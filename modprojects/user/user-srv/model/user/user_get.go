@@ -1,9 +1,9 @@
 package user
 
 import (
-	"github.com/micro/go-log"
+	"github.com/go-log/log"
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base/db"
-	proto "user/user-srv/proto/user"
+	proto "user-srv/proto/user"
 )
 
 func (s *service) QueryUserByName(userName string) (ret *proto.User, err error) {
