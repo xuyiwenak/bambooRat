@@ -976,6 +976,8 @@ github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q
 github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:aYKd//L2LvnjZzWKhF00oedf4jCCReLcmhLdhm1A27Q=
 github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190524023150-aaf806aa7a39 h1:mcXqd+msdCkEIOsuf4Nmv+FpWTtn0MpzRJ+cD5FMI+U=
 github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190524023150-aaf806aa7a39/go.mod h1:reXNREWhtN9YDgjwwG1/OL7TqXoZ83+ObUEeQIMHXaU=
+github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190527094435-77fdf488a1b2 h1:jjibhCKQJgvdBM5yI1w/taMKsStVoGJhoTrxauGBekw=
+github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190527094435-77fdf488a1b2/go.mod h1:eg8MrR4/sUfKStT4uxa9C0qBjsGKvK3SH+Tw81m8jKE=
 github.com/yudai/gojsondiff v1.0.0/go.mod h1:AY32+k2cwILAkW1fbgxQ5mUmMiZFgLIV+FBNExI05xg=
 github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82/go.mod h1:lgjkn3NuSvDfVJdfcVVdX+jpBxNmX4rDAzaS45IcYoM=
 github.com/yudai/pp v2.0.1+incompatible/go.mod h1:PuxR/8QJ7cyCkFp/aUDS+JY727OFEZkTdatxwunjIkc=

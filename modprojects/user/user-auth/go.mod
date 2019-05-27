@@ -43,13 +43,11 @@ replace (
 )
 
 require (
-	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/go-redis/redis v6.15.2+incompatible
-	github.com/golang/protobuf v1.3.1
-	github.com/mattn/go-colorable v0.1.1 // indirect
 	github.com/micro/cli v0.1.0
 	github.com/micro/go-log v0.1.0
 	github.com/micro/go-micro v1.2.0
 	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190524023150-aaf806aa7a39
+	github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190527094435-77fdf488a1b2
 )

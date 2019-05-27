@@ -3,9 +3,9 @@ package handler
 import (
 	"context"
 	"github.com/micro/go-log"
+	auth "github.com/xuyiwenak/bambooRat/modprojects/user/proto/auth"
 	"strconv"
 	"user-auth/model/access"
-	auth "user-auth/proto/auth"
 )
 
 var (
