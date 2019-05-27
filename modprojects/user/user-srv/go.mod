@@ -43,13 +43,11 @@ replace (
 )
 
 require (
-	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2 // indirect
 	github.com/go-log/log v0.1.0
 	github.com/go-sql-driver/mysql v1.4.1
-	github.com/golang/protobuf v1.3.1
-	github.com/mattn/go-colorable v0.1.1 // indirect
 	github.com/micro/cli v0.1.0
 	github.com/micro/go-log v0.1.0
 	github.com/micro/go-micro v1.2.0
 	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190527074154-32597d425e47
+	github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190527103113-ee33b324dac4
 )

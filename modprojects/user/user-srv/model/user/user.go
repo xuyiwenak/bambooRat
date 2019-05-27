@@ -2,8 +2,8 @@ package user
 
 import (
 	"fmt"
+	proto "github.com/xuyiwenak/bambooRat/modprojects/user/proto/user"
 	"sync"
-	proto "user-srv/proto/user"
 )
 
 var (
