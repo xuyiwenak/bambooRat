@@ -33,11 +33,23 @@ replace (
 	k8s.io/api => github.com/kubernetes/api v0.0.0-20190416052506-9eb4726e83e4
 	k8s.io/apimachinery => github.com/kubernetes/apimachinery v0.0.0-20190416092415-3370b4aef5d6
 	k8s.io/client-go => github.com/kubernetes/client-go v11.0.0+incompatible
+	k8s.io/gengo => github.com/kubernetes/gengo v0.0.0-20190327210449-e17681d19d3a
 	k8s.io/klog => github.com/simonpasquier/klog-gokit v0.1.0
 	k8s.io/kube-openapi => github.com/kubernetes/kube-openapi v0.0.0-20190401085232-94e1e7b7574c
 	k8s.io/utils => github.com/kubernetes/utils v0.0.0-20190308190857-21c4ce38f2a7
-	k8s.io/gengo => github.com/kubernetes/gengo latest
+	sigs.k8s.io/structured-merge-diff => github.com/kubernetes-sigs/structured-merge-diff v0.0.0-20190525122527-15d366b2352e
 	sigs.k8s.io/yaml => github.com/kubernetes-sigs/yaml v1.1.0
-	sigs.k8s.io/structured-merge-diff => github.com/kubernetes-sigs/structured-merge-diff latest
 
+)
+
+require (
+	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2 // indirect
+	github.com/go-log/log v0.1.0
+	github.com/go-sql-driver/mysql v1.4.1
+	github.com/golang/protobuf v1.3.1
+	github.com/mattn/go-colorable v0.1.1 // indirect
+	github.com/micro/cli v0.1.0
+	github.com/micro/go-log v0.1.0
+	github.com/micro/go-micro v1.2.0
+	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190527074154-32597d425e47
 )
