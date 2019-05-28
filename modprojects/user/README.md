@@ -1,14 +1,60 @@
 # user项目说明 
-## 项目目录结构说明
-- user-web 以下简称**web**
-- user-srv 以下简称**service**
+##  项目结构
+```
+├── README.md
+├── base                 # 基础组件库
+│   ├── README.md
+│   ├── base.go
+│   ├── config
+│   ├── db
+│   ├── go.mod
+│   ├── go.sum
+│   └── redis
+├── docker-compose.yml   # docker-compose 工具库，使用docker容器编排需要注意修改业务conf里面的连接名称
+├── proto                # proto类库
+│   ├── README.md
+│   ├── auth
+│   ├── go.mod
+│   ├── go.sum
+│   └── user
+├── proto_gen_recurse.sh # 生成proto类文件的脚本
+├── scripts
+│   └── schema.sql
+├── user-auth            # bambooRat.micro.srv.auth 处理认证业务
+│   ├── Dockerfile
+│   ├── README.md
+│   ├── conf             # 业务的配置库
+│   ├── go.mod
+│   ├── go.sum
+│   ├── handler
+│   ├── main.go
+│   ├── model
+│   ├── plugin.go
+│   └── vendor
+├── user-srv            # bambooRat.micro.srv.user 对架构内应用提供业务服务
+│   ├── Dockerfile
+│   ├── README.md
+│   ├── conf
+│   ├── go.mod
+│   ├── go.sum
+│   ├── handler
+│   ├── main.go
+│   ├── model
+│   ├── plugin.go
+│   └── vendor
+└── user-web            # bambooRat.micro.web.user 接收API下放的路由请求
+    ├── Dockerfile
+    ├── README.md
+    ├── conf
+    ├── get_url_test.sh
+    ├── go.mod
+    ├── go.sum
+    ├── handler
+    ├── main.go
+    ├── plugin.go
+    └── vendor
+``` 
 
-|服务|命名空间|说明|---|
-|---|---|---|---|
-|接入层API|bambooRat.micro.web|负责代理所有**bambooRat.micro.web**下游的web应用，比如**bambooRat.micro.web.user**等|---|
-|用户web|bambooRat.micro.web.user|接收API下放的路由为/user请求|---|
-|用户服务|bambooRat.micro.srv.user|对架构内应用提供user查询服务|---|  
- 
  ##docker构建微服务方式
  为了方便微服务的管理，单机环境目前由docker-compose做容器编排，降低开发成本，具体步骤如下：
  - 启动
