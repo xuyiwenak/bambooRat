@@ -3,7 +3,7 @@ package db
 import (
 	"database/sql"
 	"fmt"
-	"github.com/micro/go-log"
+	"github.com/micro/go-micro/util/log"
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
 	"sync"
 )

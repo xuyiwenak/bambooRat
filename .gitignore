@@ -13,3 +13,4 @@ goprojects/bin/*
 goprojects/bin/!protoc
 **/vendor
 **/config-consul-srv/
+modprojects/user/consul-config-push/

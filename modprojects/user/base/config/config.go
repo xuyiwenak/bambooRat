@@ -1,12 +1,10 @@
 package config
 
 import (
-	"github.com/micro/go-config"
-	"github.com/micro/go-config/source"
-	"github.com/micro/go-config/source/file"
-	"github.com/micro/go-log"
-	"os"
-	"path/filepath"
+	"fmt"
+	"github.com/micro/go-micro/config"
+	"github.com/micro/go-micro/config/source/consul"
+	"github.com/micro/go-micro/util/log"
 	"strings"
 	"sync"
 )
@@ -16,8 +14,8 @@ var (
 )
 
 var (
-	defaultRootPath         = "app"
-	defaultConfigFilePrefix = "application-"
+	defaultConfigPath       = "/micro/config/cluster" // 默认的仓库地址
+	defaultConsulServerAddr = "127.0.0.1:8500"
 	consulConfig            defaultConsulConfig
 	mysqlConfig             defaultMysqlConfig
 	jwtConfig               defaultJwtConfig
@@ -37,50 +35,50 @@ func Init() {
 		log.Logf("[Init] 配置已经初始化过")
 		return
 	}
+	// 从注册中心读取配置
+	consulSource := consul.NewSource(
+		consul.WithAddress(defaultConsulServerAddr),
+		consul.WithPrefix(defaultConfigPath),
+		// optionally strip the provided prefix from the keys, defaults to false
+		consul.StripPrefix(true),
+	)
+	// 创建新的配置
+	conf := config.NewConfig()
+	if err := conf.Load(consulSource); err != nil {
+		log.Logf("load config errr!!!", err)
+	}
+	if err := conf.Get("micro", "config", "cluster"); err != nil {
+		log.Logf("json format err!!!", err)
+	}
+	configMap := conf.Map()
+	fmt.Println(configMap)
 
-	// 加载yml配置
-	// 先加载基础配置
-	appPath, _ := filepath.Abs(filepath.Dir(filepath.Join("./", string(filepath.Separator))))
-
-	pt := filepath.Join(appPath, "conf")
-	os.Chdir(appPath)
-
-	// 找到application.yml文件
-	if err = config.Load(file.NewSource(file.WithPath(pt + "/application.yml"))); err != nil {
+	// 侦听文件变动
+	watcher, err := conf.Watch()
+	if err != nil {
+		log.Fatalf("[Init] 开始侦听应用配置文件变动 异常，%s", err)
 		panic(err)
 	}
-
-	// 找到需要引入的新配置文件
-	if err = config.Get(defaultRootPath, "profiles").Scan(&profiles); err != nil {
-		panic(err)
-	}
-
-	log.Logf("[Init] 加载配置文件：path: %s, %+v\n", pt+"/application.yml", profiles)
-
-	// 开始导入新文件
-	if len(profiles.GetInclude()) > 0 {
-		include := strings.Split(profiles.GetInclude(), ",")
-
-		sources := make([]source.Source, len(include))
-		for i := 0; i < len(include); i++ {
-			filePath := pt + string(filepath.Separator) + defaultConfigFilePrefix + strings.TrimSpace(include[i]) + ".yml"
-
-			log.Logf("[Init] 加载配置文件：path: %s\n", filePath)
-
-			sources[i] = file.NewSource(file.WithPath(filePath))
+	go func() {
+		for {
+			v, err := watcher.Next()
+			if err != nil {
+				log.Fatalf("[loadAndWatchConfigFile] 侦听应用配置文件变动 异常， %s", err)
+				return
+			}
+			if err = conf.Load(consulSource); err != nil {
+				panic(err)
+			}
+			log.Logf("[loadAndWatchConfigFile] 文件变动，%s", string(v.Bytes()))
 		}
-
-		// 加载include的文件
-		if err = config.Load(sources...); err != nil {
-			panic(err)
-		}
-	}
-
+	}()
+	// 处理前缀分割问题
+	prefixPath := strings.Replace(defaultConfigPath, "/", ",", -1)
 	// 赋值
-	config.Get(defaultRootPath, "consul").Scan(&consulConfig)
-	config.Get(defaultRootPath, "mysql").Scan(&mysqlConfig)
-	config.Get(defaultRootPath, "redis").Scan(&redisConfig)
-	config.Get(defaultRootPath, "jwt").Scan(&jwtConfig)
+	conf.Get(strings.TrimLeft(prefixPath, ","), "consul").Scan(&consulConfig)
+	conf.Get(strings.TrimLeft(prefixPath, ","), "mysql").Scan(&mysqlConfig)
+	conf.Get(strings.TrimLeft(prefixPath, ","), "redis").Scan(&redisConfig)
+	conf.Get(strings.TrimLeft(prefixPath, ","), "jwt").Scan(&jwtConfig)
 
 	// 标记已经初始化
 	inited = true

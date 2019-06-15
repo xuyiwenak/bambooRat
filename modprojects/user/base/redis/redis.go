@@ -2,7 +2,7 @@ package redis
 
 import (
 	"github.com/go-redis/redis"
-	"github.com/micro/go-log"
+	"github.com/micro/go-micro/util/log"
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
 	"sync"
 )
