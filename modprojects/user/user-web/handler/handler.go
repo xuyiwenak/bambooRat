@@ -3,8 +3,8 @@ package handler
 import (
 	"context"
 	"encoding/json"
-	"github.com/go-log/log"
 	"github.com/micro/go-micro/client"
+	"github.com/micro/go-micro/util/log"
 	auth "github.com/xuyiwenak/bambooRat/modprojects/user/proto/auth"
 	us "github.com/xuyiwenak/bambooRat/modprojects/user/proto/user"
 	"net/http"
