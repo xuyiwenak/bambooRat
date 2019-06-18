@@ -9,9 +9,10 @@ type ConsulConfig interface {
 
 // defaultConsulConfig 默认consul 配置
 type defaultConsulConfig struct {
-	Enabled bool   `json:"enabled"`
-	Host    string `json:"host"`
-	Port    int    `json:"port"`
+	Enabled     bool   `json:"enabled"`
+	Host        string `json:"host"`
+	Port        int    `json:"port"`
+	Kv_location string `json:"kv_location"`
 }
 
 // GetPort consul 端口

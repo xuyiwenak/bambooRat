@@ -5,7 +5,6 @@ import (
 	"github.com/micro/go-micro/config"
 	"github.com/micro/go-micro/config/source/consul"
 	"github.com/micro/go-micro/util/log"
-	"strings"
 	"sync"
 )
 
@@ -14,13 +13,12 @@ var (
 )
 
 var (
-	defaultConfigPath       = "/micro/config/cluster" // 默认的仓库地址
+	defaultConfigPath       = "micro/config/cluster" // 默认的仓库地址
 	defaultConsulServerAddr = "127.0.0.1:8500"
 	consulConfig            defaultConsulConfig
 	mysqlConfig             defaultMysqlConfig
 	jwtConfig               defaultJwtConfig
 	redisConfig             defaultRedisConfig
-	profiles                defaultProfiles
 	m                       sync.RWMutex
 	inited                  bool
 )
@@ -47,42 +45,41 @@ func Init() {
 	if err := conf.Load(consulSource); err != nil {
 		log.Logf("load config errr!!!", err)
 	}
-	if err := conf.Get("micro", "config", "cluster"); err != nil {
-		log.Logf("json format err!!!", err)
-	}
 	configMap := conf.Map()
 	fmt.Println(configMap)
 
 	// 侦听文件变动
 	watcher, err := conf.Watch()
 	if err != nil {
-		log.Fatalf("[Init] 开始侦听应用配置文件变动 异常，%s", err)
+		log.Fatalf("[Init] 侦听consul配置中心 watcher异常，%s", err)
 		panic(err)
 	}
 	go func() {
 		for {
 			v, err := watcher.Next()
 			if err != nil {
-				log.Fatalf("[loadAndWatchConfigFile] 侦听应用配置文件变动 异常， %s", err)
+				log.Fatalf("侦听consul配置中心 异常， %s", err)
 				return
 			}
 			if err = conf.Load(consulSource); err != nil {
 				panic(err)
 			}
-			log.Logf("[loadAndWatchConfigFile] 文件变动，%s", string(v.Bytes()))
+			log.Logf("consul配置中心有变化，%s", string(v.Bytes()))
 		}
 	}()
-	// 处理前缀分割问题
-	prefixPath := strings.Replace(defaultConfigPath, "/", ",", -1)
 	// 赋值
-	conf.Get("consul").Scan(&consulConfig)
-	fmt.Println(consulConfig)
-	conf.Get(strings.TrimLeft(prefixPath, ","), "mysql").Scan(&mysqlConfig)
-	fmt.Println(mysqlConfig)
-	conf.Get(strings.TrimLeft(prefixPath, ","), "redis").Scan(&redisConfig)
-	fmt.Println(redisConfig)
-	conf.Get(strings.TrimLeft(prefixPath, ","), "jwt").Scan(&jwtConfig)
-	fmt.Println(jwtConfig)
+	if err := conf.Get("consul").Scan(&consulConfig); err != nil {
+		log.Logf("consul配置加载异常:%s", err)
+	}
+	if err := conf.Get("mysql").Scan(&mysqlConfig); err != nil {
+		log.Logf("mysql配置加载异常:%s", err)
+	}
+	if err := conf.Get("redis").Scan(&redisConfig); err != nil {
+		log.Logf("redis配置加载异常:%s", err)
+	}
+	if err := conf.Get("jwt").Scan(&jwtConfig); err != nil {
+		log.Logf("jwt配置加载异常:%s", err)
+	}
 
 	// 标记已经初始化
 	inited = true

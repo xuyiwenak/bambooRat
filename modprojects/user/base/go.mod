@@ -44,4 +44,5 @@ require (
 	github.com/go-redis/redis v6.15.2+incompatible
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/micro/go-micro v1.6.0
+	github.com/mitchellh/go-homedir v1.1.0 // indirect
 )
