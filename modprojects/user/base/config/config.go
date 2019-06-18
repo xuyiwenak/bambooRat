@@ -75,10 +75,14 @@ func Init() {
 	// 处理前缀分割问题
 	prefixPath := strings.Replace(defaultConfigPath, "/", ",", -1)
 	// 赋值
-	conf.Get(strings.TrimLeft(prefixPath, ","), "consul").Scan(&consulConfig)
+	conf.Get("consul").Scan(&consulConfig)
+	fmt.Println(consulConfig)
 	conf.Get(strings.TrimLeft(prefixPath, ","), "mysql").Scan(&mysqlConfig)
+	fmt.Println(mysqlConfig)
 	conf.Get(strings.TrimLeft(prefixPath, ","), "redis").Scan(&redisConfig)
+	fmt.Println(redisConfig)
 	conf.Get(strings.TrimLeft(prefixPath, ","), "jwt").Scan(&jwtConfig)
+	fmt.Println(jwtConfig)
 
 	// 标记已经初始化
 	inited = true
