@@ -1,7 +1,6 @@
 package config
 
 import (
-	"fmt"
 	"github.com/micro/go-micro/config"
 	"github.com/micro/go-micro/config/source/consul"
 	"github.com/micro/go-micro/util/log"
@@ -45,9 +44,6 @@ func Init() {
 	if err := conf.Load(consulSource); err != nil {
 		log.Logf("load config errr!!!", err)
 	}
-	configMap := conf.Map()
-	fmt.Println(configMap)
-
 	// 侦听文件变动
 	watcher, err := conf.Watch()
 	if err != nil {
