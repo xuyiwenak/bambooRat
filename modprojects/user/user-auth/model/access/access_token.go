@@ -3,8 +3,8 @@ package access
 import (
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
-	"github.com/micro/go-log"
 	"github.com/micro/go-micro/broker"
+	"github.com/micro/go-micro/util/log"
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
 	"time"
 )
