@@ -31,10 +31,8 @@ replace (
 	gopkg.in/src-d/go-git-fixtures.v3 => github.com/src-d/go-git-fixtures v3.4.0+incompatible
 	gopkg.in/yaml.v2 => github.com/go-yaml/yaml v2.1.0+incompatible
 	k8s.io/api => github.com/kubernetes/api v0.0.0-20190416052506-9eb4726e83e4
-	k8s.io/apimachinery => github.com/kubernetes/apimachinery v0.0.0-20190416092415-3370b4aef5d6
 	k8s.io/client-go => github.com/kubernetes/client-go v11.0.0+incompatible
 	k8s.io/klog => github.com/simonpasquier/klog-gokit v0.1.0
-	k8s.io/kube-openapi => github.com/kubernetes/kube-openapi v0.0.0-20190401085232-94e1e7b7574c
 	k8s.io/utils => github.com/kubernetes/utils v0.0.0-20190308190857-21c4ce38f2a7
 	sigs.k8s.io/yaml => github.com/kubernetes-sigs/yaml v1.1.0
 )
@@ -44,5 +42,4 @@ require (
 	github.com/go-redis/redis v6.15.2+incompatible
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/micro/go-micro v1.6.0
-	github.com/mitchellh/go-homedir v1.1.0 // indirect
 )
