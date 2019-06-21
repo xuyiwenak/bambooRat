@@ -8,6 +8,7 @@ import (
 type RedisConfig interface {
 	GetEnabled() bool
 	GetConn() string
+	GetDockerConn() string
 	GetPassword() string
 	GetDBNum() int
 	GetSentinelConfig() RedisSentinelConfig
@@ -22,12 +23,13 @@ type RedisSentinelConfig interface {
 
 // defaultRedisConfig redis 配置
 type defaultRedisConfig struct {
-	Enabled  bool          `json:"enabled"`
-	Conn     string        `json:"conn"`
-	Password string        `json:"password"`
-	DBNum    int           `json:"dbNum"`
-	Timeout  int           `json:"timeout"`
-	sentinel redisSentinel `json:"sentinel"`
+	Enabled    bool          `json:"enabled"`
+	DockerConn string        `json:"docker_conn"`
+	Conn       string        `json:"conn"`
+	Password   string        `json:"password"`
+	DBNum      int           `json:"dbNum"`
+	Timeout    int           `json:"timeout"`
+	sentinel   redisSentinel `json:"sentinel"`
 }
 
 type redisSentinel struct {
@@ -45,6 +47,11 @@ func (r defaultRedisConfig) GetEnabled() bool {
 // GetConn redis 地址
 func (r defaultRedisConfig) GetConn() string {
 	return r.Conn
+}
+
+// GetDockerConn redis docker地址
+func (r defaultRedisConfig) GetDockerConn() string {
+	return r.DockerConn
 }
 
 // GetPassword redis 密码

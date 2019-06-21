@@ -36,7 +36,6 @@ func Init() {
 	consulSource := consul.NewSource(
 		consul.WithAddress(defaultConsulServerAddr),
 		consul.WithPrefix(defaultConfigPath),
-		// optionally strip the provided prefix from the keys, defaults to false
 		consul.StripPrefix(true),
 	)
 	// 创建新的配置

@@ -3,6 +3,7 @@ package config
 // ConsulConfig consul 配置
 type ConsulConfig interface {
 	GetEnabled() bool
+	GetDockerHost() string
 	GetPort() int
 	GetHost() string
 }
@@ -11,6 +12,7 @@ type ConsulConfig interface {
 type defaultConsulConfig struct {
 	Enabled     bool   `json:"enabled"`
 	Host        string `json:"host"`
+	DockerHost  string `json:"docker_host"`
 	Port        int    `json:"port"`
 	Kv_location string `json:"kv_location"`
 }
@@ -28,4 +30,9 @@ func (c defaultConsulConfig) GetEnabled() bool {
 // GetHost consul 主机地址
 func (c defaultConsulConfig) GetHost() string {
 	return c.Host
+}
+
+// GetDockerHost consul 获取docker环境的
+func (c defaultConsulConfig) GetDockerHost() string {
+	return c.DockerHost
 }
