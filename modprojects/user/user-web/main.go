@@ -9,8 +9,13 @@ import (
 	"github.com/micro/go-web"
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base"
 	"github.com/xuyiwenak/bambooRat/modprojects/user/base/config"
+	"os"
 	"time"
 	"user-web/handler"
+)
+
+var (
+	dockerMode string
 )
 
 func main() {
@@ -18,6 +23,8 @@ func main() {
 	// 初始化配置
 	base.Init()
 
+	dockerMode = os.Getenv("RUN_DOCKER_MODE")
+	fmt.Println(dockerMode)
 	// 使用consul注册
 	micReg := consul.NewRegistry(registryOptions)
 
@@ -53,5 +60,10 @@ func main() {
 func registryOptions(ops *registry.Options) {
 	consulCfg := config.GetConsulConfig()
 	ops.Timeout = time.Second * 5
-	ops.Addrs = []string{fmt.Sprintf("%s:%d", consulCfg.GetHost(), consulCfg.GetPort())}
+	//
+	if dockerMode == "on" {
+		ops.Addrs = []string{fmt.Sprintf("%s:%d", consulCfg.GetDockerHost(), consulCfg.GetPort())}
+	} else {
+		ops.Addrs = []string{fmt.Sprintf("%s:%d", consulCfg.GetHost(), consulCfg.GetPort())}
+	}
 }
