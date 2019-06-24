@@ -2,8 +2,8 @@ version: '3'
 services:
   user-srv:
     build: ./user-srv
-    volumes:
-      - .:/code
+    environment:
+      RUN_DOCKER_MODE: "on"
     depends_on:
       - mysql_db
     links:
@@ -12,14 +12,20 @@ services:
     build: ./user-web
     ports:
       - "8088:8088"
-    volumes:
-      - .:/code
+    environment:
+      RUN_DOCKER_MODE: "on"
   user-auth:
     build: ./user-auth
     depends_on:
       - redis
     links:
       - redis
+    environment:
+      RUN_DOCKER_MODE: "on"
+  consul-config-push:
+    build: ./consul-config-push
+    depends_on:
+      - consul4
   mysql_db:
     image: "mysql:latest"
     restart: always
