@@ -15,6 +15,10 @@ import (
 	"user-srv/model"
 )
 
+var (
+	dockerMode string
+)
+
 func main() {
 
 	// 初始化配置、数据库等信息
@@ -52,5 +56,10 @@ func main() {
 func registryOptions(ops *registry.Options) {
 	consulCfg := config.GetConsulConfig()
 	ops.Timeout = time.Second * 5
-	ops.Addrs = []string{fmt.Sprintf("%s:%d", consulCfg.GetHost(), consulCfg.GetPort())}
+	//
+	if dockerMode == "on" {
+		ops.Addrs = []string{fmt.Sprintf("%s:%d", consulCfg.GetDockerHost(), consulCfg.GetPort())}
+	} else {
+		ops.Addrs = []string{fmt.Sprintf("%s:%d", consulCfg.GetHost(), consulCfg.GetPort())}
+	}
 }
