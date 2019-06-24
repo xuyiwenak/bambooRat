@@ -39,7 +39,6 @@ replace (
 	k8s.io/utils => github.com/kubernetes/utils v0.0.0-20190308190857-21c4ce38f2a7
 	sigs.k8s.io/structured-merge-diff => github.com/kubernetes-sigs/structured-merge-diff v0.0.0-20190525122527-15d366b2352e
 	sigs.k8s.io/yaml => github.com/kubernetes-sigs/yaml v1.1.0
-
 )
 
 require (
@@ -78,8 +77,8 @@ require (
 	github.com/sirupsen/logrus v1.4.2 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/stretchr/objx v0.2.0 // indirect
-	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190618102706-0706ca6342fd
-	github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190615083719-a7e103008290
+	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190618063707-14fd76839e02
+	github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190618063707-14fd76839e02
 	golang.org/x/exp v0.0.0-20190510132918-efd6b22b2522 // indirect
 	golang.org/x/image v0.0.0-20190516052701-61b8692d9a5c // indirect
 	golang.org/x/lint v0.0.0-20190409202823-959b441ac422 // indirect

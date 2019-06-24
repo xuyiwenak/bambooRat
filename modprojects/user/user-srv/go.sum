@@ -689,6 +689,8 @@ github.com/xanzy/ssh-agent v0.2.0/go.mod h1:0NyE30eGUDliuLEHJgYte/zncp2zdTStcOnW
 github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c/go.mod h1:lB8K/P019DLNhemzwFU4jHLhdvlE6uDZjXFejJXr49I=
 github.com/xdg/stringprep v1.0.0/go.mod h1:Jhud4/sHMO4oL310DaZAKk9ZaJ08SJfe+sJh0HrGL1Y=
 github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q53MR2AWcXfiuqkDkRtnGDLqkBTpCHuJHxtU=
+github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190618063707-14fd76839e02 h1:2sDg1x0FSlbQTF+JpWoEJ9rEzavmc8eARHZveyT5Uoc=
+github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190618063707-14fd76839e02/go.mod h1:B7Mo04RtwL5+kPl4V8KGx39732pEqcjcX5ifW0J3y7M=
 github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190618132702-6ab4e3928021 h1:I9GXpjujBFN3jxsexcLN5zfoxKWfdT4MRi+olzRTTgg=
 github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190618132702-6ab4e3928021/go.mod h1:VDFkcxZ77UZgdcrVXdtCINHRgOaZySaaarbN6YaqRqQ=
 github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190618063707-14fd76839e02 h1:AaCtRKtWmKsQy456QoXhuF9Alon2BvtwgMkvA3fYQzA=

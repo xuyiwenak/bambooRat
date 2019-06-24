@@ -69,6 +69,7 @@ require (
 	github.com/micro/cli v0.2.0
 	github.com/micro/go-micro v1.6.0
 	github.com/miekg/dns v1.1.13 // indirect
+	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/nats-io/nats-server/v2 v2.0.0 // indirect
 	github.com/onsi/ginkgo v1.8.0 // indirect
 	github.com/posener/complete v1.2.1 // indirect
@@ -79,7 +80,7 @@ require (
 	github.com/sirupsen/logrus v1.4.2 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/stretchr/objx v0.2.0 // indirect
-	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190618132702-6ab4e3928021
+	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190618063707-14fd76839e02
 	github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190618063707-14fd76839e02
 	golang.org/x/exp v0.0.0-20190510132918-efd6b22b2522 // indirect
 	golang.org/x/image v0.0.0-20190516052701-61b8692d9a5c // indirect
