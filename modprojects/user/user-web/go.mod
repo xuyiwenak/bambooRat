@@ -45,9 +45,11 @@ require (
 	cloud.google.com/go v0.39.0 // indirect
 	github.com/OneOfOne/xxhash v1.2.5 // indirect
 	github.com/armon/go-metrics v0.0.0-20190430140413-ec5e00d3c878 // indirect
+	github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869 // indirect
 	github.com/containerd/continuity v0.0.0-20190426062206-aaeac12a7ffc // indirect
 	github.com/dgryski/go-sip13 v0.0.0-20190329191031-25c5027a8c7b // indirect
 	github.com/envoyproxy/go-control-plane v0.8.0 // indirect
+	github.com/go-redis/redis v6.15.2+incompatible // indirect
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/gogo/googleapis v1.2.0 // indirect
 	github.com/golang/mock v1.3.1 // indirect
@@ -60,6 +62,7 @@ require (
 	github.com/hashicorp/serf v0.8.3 // indirect
 	github.com/kisielk/errcheck v1.2.0 // indirect
 	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
+	github.com/kr/pretty v0.1.0 // indirect
 	github.com/kr/pty v1.1.4 // indirect
 	github.com/lyft/protoc-gen-validate v0.0.14 // indirect
 	github.com/mattn/go-isatty v0.0.8 // indirect
