@@ -30,6 +30,8 @@ func main() {
 	// 新建服务
 	service := micro.NewService(
 		micro.Name("bambooRat.micro.srv.user"),
+		micro.RegisterTTL(time.Second*15),      // 指定TTL
+		micro.RegisterInterval(time.Second*10), //指定重新注册的间隔
 		micro.Registry(micReg),
 		micro.Version("latest"),
 	)
