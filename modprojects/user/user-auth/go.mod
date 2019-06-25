@@ -82,7 +82,7 @@ require (
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/stretchr/objx v0.2.0 // indirect
 	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190618063707-14fd76839e02
-	github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190618132702-6ab4e3928021
+	github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190618063707-14fd76839e02
 	golang.org/x/exp v0.0.0-20190510132918-efd6b22b2522 // indirect
 	golang.org/x/image v0.0.0-20190516052701-61b8692d9a5c // indirect
 	golang.org/x/lint v0.0.0-20190409202823-959b441ac422 // indirect
