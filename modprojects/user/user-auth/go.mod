@@ -47,6 +47,7 @@ require (
 	github.com/OneOfOne/xxhash v1.2.5 // indirect
 	github.com/armon/go-metrics v0.0.0-20190430140413-ec5e00d3c878 // indirect
 	github.com/armon/go-radix v1.0.0 // indirect
+	github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869 // indirect
 	github.com/containerd/continuity v0.0.0-20190426062206-aaeac12a7ffc // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/dgryski/go-sip13 v0.0.0-20190329191031-25c5027a8c7b // indirect
@@ -64,6 +65,7 @@ require (
 	github.com/hashicorp/serf v0.8.3 // indirect
 	github.com/kisielk/errcheck v1.2.0 // indirect
 	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
+	github.com/kr/pretty v0.1.0 // indirect
 	github.com/kr/pty v1.1.4 // indirect
 	github.com/lyft/protoc-gen-validate v0.0.14 // indirect
 	github.com/mattn/go-isatty v0.0.8 // indirect
