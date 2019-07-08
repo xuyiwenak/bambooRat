@@ -1,4 +1,5 @@
 # bambooRat
+<a title="Hits" target="_blank" href="https://github.com/xuyiwenak/bambooRat"><img src="https://hits.b3log.org/b3log/hits.svg"></a>
 ***
 ## 项目简介
 主要是方便自动构建项目，快速进行基础开发  
