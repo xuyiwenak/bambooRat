@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package heartbeat;
+
+message Request {
+    uint64 client_id = 1;
+    uint64 user_id = 2;
+    uint64 msg_id = 3;
+    string data = 4;
+}
+
+message Response {
+    uint64 client_id = 1;
+    uint64 user_id = 2;
+    uint64 msg_id = 3;
+    string data = 4;
+}
