@@ -10,7 +10,7 @@ cd $GOPATH/pkg/download/
 
 curl -L $protobuf_url -o temp.tar
 tar xvf temp.tar
-# find . -name "consul" | xargs -I {} mv {} ${GOPATH}/bin
+# find . -name "proto" | xargs -I {} mv {} ${GOPATH}/bin
 rm -rf temp.tar
 
 # install pb library env
@@ -28,9 +28,3 @@ echo "PBPATH=${PBPATH}"
 echo "update ~/.bash_profile..."
 PFILE="$HOME/.bash_profile"
 source $PFILE
-
-
-
-# consul agent -dev
-# http://127.0.0.1:8500/ui/#/dc1/services
-# consul leave
