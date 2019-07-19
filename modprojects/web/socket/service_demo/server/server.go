@@ -1,4 +1,4 @@
-package server
+package main
 
 import (
 	"github.com/gorilla/websocket"
@@ -13,26 +13,22 @@ var upGrader = websocket.Upgrader{
 
 func main() {
 	// New web service
+
 	service := web.NewService(
-		web.Name("go.micro.web.websocket"),
+		web.Name("go.micro.web.ws"),
 	)
 
 	if err := service.Init(); err != nil {
 		log.Fatal("Init", err)
 	}
-
-	// static files
-	service.Handle("/websocket/", http.StripPrefix("/websocket/", http.FileServer(http.Dir("html"))))
-
-	// websocket interface
-	service.HandleFunc("/websocket/hi", hi)
+	// websocket 连接接口 web.name注册根据.分割路由路径，所以注册的路径要和name对应上
+	service.HandleFunc("/ws/conn", conn)
 
 	if err := service.Run(); err != nil {
 		log.Fatal("Run: ", err)
 	}
 }
-
-func hi(w http.ResponseWriter, r *http.Request) {
+func conn(w http.ResponseWriter, r *http.Request) {
 
 	c, err := upGrader.Upgrade(w, r, nil)
 	if err != nil {
