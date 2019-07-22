@@ -1,5 +1,5 @@
 # bambooRat
-[![Build Status](https://travis-ci.org/xuyiwenak/bambooRat.svg?branch=master)](https://travis-ci.org/xuyiwenak/bambooRat) [!
+[![Build Status](https://travis-ci.org/xuyiwenak/bambooRat.svg?branch=master)](https://travis-ci.org/xuyiwenak/bambooRat)
 ***
 ## 项目简介
 主要是方便自动构建项目，快速进行基础开发  
