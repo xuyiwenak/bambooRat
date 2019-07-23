@@ -1,17 +1,20 @@
 package main
 
 import (
-	"bytes"
-	"encoding/binary"
+	"github.com/gogo/protobuf/proto"
 	"github.com/gorilla/websocket"
 	"github.com/micro/go-micro/web"
 	"log"
 	"net/http"
+	"web/socket/heartbeat_demo/proto"
 )
 
 var upGrader = websocket.Upgrader{
 	CheckOrigin: func(r *http.Request) bool { return true },
 }
+var (
+	clientRes heartbeat.Request
+)
 
 func main() {
 	// New web service
@@ -32,36 +35,24 @@ func main() {
 }
 func conn(w http.ResponseWriter, r *http.Request) {
 	//
-	c, err := upGrader.Upgrade(w, r, nil)
+	conn, err := upGrader.Upgrade(w, r, nil)
 	if err != nil {
 		log.Printf("upgrade: %s", err)
 		return
 	}
 
-	defer c.Close()
+	defer conn.Close()
 
 	for {
-		mt, revMsg, err := c.ReadMessage()
+		mt, buffer, err := conn.ReadMessage()
 		if err != nil {
 			log.Println("read:", err)
 			break
 		}
-		sendMsg := MsgAssembler(revMsg)
-		log.Printf("recv: %s", sendMsg)
-
-		err = c.WriteMessage(mt, sendMsg)
-		if err != nil {
-			log.Println("write:", err)
-			break
+		if err := proto.Unmarshal(buffer, &clientRes); err != nil {
+			log.Printf("proto unmarshal: %s", err)
 		}
+		log.Println(mt)
+		log.Printf("%v", clientRes)
 	}
-}
-
-func MsgAssembler(data []byte) []byte {
-	// 转换为数字id
-	b_buf := bytes.NewBuffer(data)
-	var x int32
-	binary.Read(b_buf, binary.BigEndian, &x)
-	log.Printf("tick id = %d", x)
-	return data
 }
