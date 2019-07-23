@@ -110,19 +110,22 @@ func MsgAssembler() []byte {
 	}
 	return byteData
 }
-
+func msgHandler() {
+	clientWrapper := NewWebsocketClient(wsHost, wsPath)
+	if err := clientWrapper.SendMessage(); err != nil {
+		fmt.Printf("SendMessage: errr%v", err)
+	}
+}
 func main() {
 	// 一个简历socket连接的客户端服务
 	service := micro.NewService(
 		micro.Name("go.micro.web.wsClient"),
 	)
 	service.Init()
-	clientWrapper := NewWebsocketClient(wsHost, wsPath)
-
-	if err := clientWrapper.SendMessage(); err != nil {
-		fmt.Printf("SendMessage: errr%v", err)
-	}
+	// 这里就开始发了别影响服务启动
+	go msgHandler()
 	if err := service.Run(); err != nil {
 		fmt.Printf("Run: errr%v", err)
 	}
+
 }
