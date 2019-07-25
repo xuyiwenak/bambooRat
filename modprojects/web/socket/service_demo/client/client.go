@@ -56,6 +56,7 @@ func (this *Client) SendMessage() error {
 	}()
 	inputFinish := make(chan bool, 1)
 	inputFinish <- true
+	log.Logf("input your message here:", err)
 	var a string
 	for {
 		select {
