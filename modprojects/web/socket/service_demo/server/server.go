@@ -45,8 +45,9 @@ func conn(w http.ResponseWriter, r *http.Request) {
 		}
 
 		log.Printf("recv: %s", message)
-
-		err = c.WriteMessage(mt, message)
+		resStr := string(message)
+		resStr += "<===server"
+		err = c.WriteMessage(mt, []byte(resStr))
 		if err != nil {
 			log.Println("write:", err)
 			break
