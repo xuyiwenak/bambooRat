@@ -44,7 +44,7 @@ func conn(w http.ResponseWriter, r *http.Request) {
 	defer conn.Close()
 
 	for {
-		mt, buffer, err := conn.ReadMessage()
+		_, buffer, err := conn.ReadMessage()
 		if err != nil {
 			log.Println("read:", err)
 			break
@@ -52,7 +52,6 @@ func conn(w http.ResponseWriter, r *http.Request) {
 		if err := proto.Unmarshal(buffer, &clientRes); err != nil {
 			log.Printf("proto unmarshal: %s", err)
 		}
-		log.Println(mt)
-		log.Printf("%v", clientRes)
+		log.Printf("recv userId=%d MsgId=%d Data=%s", clientRes.UserId, clientRes.MsgId, clientRes.Data)
 	}
 }

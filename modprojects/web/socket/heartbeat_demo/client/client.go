@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/gogo/protobuf/proto"
 	"github.com/gorilla/websocket"
 	"github.com/micro/go-micro"
@@ -113,7 +112,7 @@ func MsgAssembler() []byte {
 func msgHandler() {
 	clientWrapper := NewWebsocketClient(wsHost, wsPath)
 	if err := clientWrapper.SendMessage(); err != nil {
-		fmt.Printf("SendMessage: errr%v", err)
+		log.Logf("SendMessage: errr%v", err)
 	}
 }
 func main() {
@@ -125,7 +124,6 @@ func main() {
 	// 这里就开始发了别影响服务启动
 	go msgHandler()
 	if err := service.Run(); err != nil {
-		fmt.Printf("Run: errr%v", err)
+		log.Logf("Run: errr %v", err)
 	}
-
 }
