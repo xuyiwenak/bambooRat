@@ -39,6 +39,7 @@ replace (
 	k8s.io/utils => github.com/kubernetes/utils v0.0.0-20190308190857-21c4ce38f2a7
 	sigs.k8s.io/structured-merge-diff => github.com/kubernetes-sigs/structured-merge-diff v0.0.0-20190525122527-15d366b2352e
 	sigs.k8s.io/yaml => github.com/kubernetes-sigs/yaml v1.1.0
+
 )
 
 require (
@@ -47,12 +48,10 @@ require (
 	github.com/go-redis/redis v6.15.2+incompatible // indirect
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/gogo/googleapis v1.2.0 // indirect
+	github.com/lucas-clemente/quic-go v0.11.1 // indirect
 	github.com/lyft/protoc-gen-validate v0.0.14 // indirect
 	github.com/micro/cli v0.2.0
-	github.com/micro/go-micro v1.7.0
-	github.com/micro/go-web v0.6.0
-	github.com/micro/micro v1.7.0 // indirect
-	github.com/micro/util v0.2.0 // indirect
+	github.com/micro/go-micro v1.8.1
 	github.com/nats-io/nats-server/v2 v2.0.0 // indirect
 	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190625075508-11084cb6c7f6
 	github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190618063707-14fd76839e02

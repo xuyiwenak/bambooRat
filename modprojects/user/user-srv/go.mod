@@ -43,20 +43,16 @@ replace (
 )
 
 require (
-	github.com/OneOfOne/xxhash v1.2.5 // indirect
 	github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869 // indirect
-	github.com/dgryski/go-sip13 v0.0.0-20190329191031-25c5027a8c7b // indirect
 	github.com/envoyproxy/go-control-plane v0.8.0 // indirect
 	github.com/go-redis/redis v6.15.2+incompatible // indirect
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/gogo/googleapis v1.2.0 // indirect
+	github.com/lucas-clemente/quic-go v0.11.1 // indirect
 	github.com/lyft/protoc-gen-validate v0.0.14 // indirect
 	github.com/micro/cli v0.2.0
-	github.com/micro/go-micro v1.7.0
-	github.com/micro/micro v1.7.0 // indirect
+	github.com/micro/go-micro v1.8.1
 	github.com/nats-io/nats-server/v2 v2.0.0 // indirect
-	github.com/prometheus/tsdb v0.8.0 // indirect
-	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/xuyiwenak/bambooRat/modprojects/user/base v0.0.0-20190625075508-11084cb6c7f6
 	github.com/xuyiwenak/bambooRat/modprojects/user/proto v0.0.0-20190618063707-14fd76839e02
 )
