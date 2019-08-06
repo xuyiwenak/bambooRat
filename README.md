@@ -35,8 +35,5 @@ export GOPROXY=https://goproxy.io
 
 相关私有仓库的搭建推荐使用[gogs](https://github.com/gogs/gogs)  
 
-如果不想在获取依赖包时太复杂，也可以使用第三方提供的包管理工具[gopm](https://github.com/gpmgo/gopm)  
-缺点就是要依赖gopm官方维护，经常有小问题。
-
 
 
