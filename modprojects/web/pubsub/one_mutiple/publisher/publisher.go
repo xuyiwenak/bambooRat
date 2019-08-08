@@ -22,7 +22,7 @@ func SendEv(topic string, p micro.Publisher) {
 		ev := proto.Event{
 			Id:        uuid.NewUUID().String(),
 			Timestamp: time.Now().Unix(),
-			Message:   fmt.Sprintf("Message you all day on %s, 'cause nothing's gonna change my love for you", topic),
+			Message:   fmt.Sprintf("pub topic name %s", topic),
 		}
 
 		body, _ := json.Marshal(ev)

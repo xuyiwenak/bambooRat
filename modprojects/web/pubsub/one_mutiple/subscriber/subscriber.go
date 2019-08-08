@@ -19,9 +19,6 @@ func main() {
 		micro.Version("latest"),
 		micro.Broker(nats.NewBroker()),
 	)
-	// service初始化会一并初始化broker 的init
-	service.Init()
-
 	// 注册一个订阅者
 	if err := micro.RegisterSubscriber("pubsub1", service.Server(), new(Sub)); err != nil {
 		log.Fatal(err)
@@ -29,6 +26,8 @@ func main() {
 	if err := micro.RegisterSubscriber("pubsub2", service.Server(), new(Sub)); err != nil {
 		log.Fatal(err)
 	}
+	// service初始化会一并初始化broker 的init
+	service.Init()
 	// 启动service的时候执行broker的connect
 	if err := service.Run(); err != nil {
 		log.Fatal(err)
