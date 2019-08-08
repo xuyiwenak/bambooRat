@@ -13,16 +13,16 @@ import (
 // sendEv 通过publisher发布事件
 func sendEv(topic string, p micro.Publisher) {
 	t := time.NewTicker(time.Second)
+	counter := 0
 	for _ = range t.C {
+		counter++
 		// 创建一个新的事件
 		ev := &proto.Event{
 			Id:        uuid.NewUUID().String(),
 			Timestamp: time.Now().Unix(),
-			Message:   fmt.Sprintf("Messaging you all day on %s", topic),
+			Message:   fmt.Sprintf("Messaging send env:%s number:%d", topic, counter),
 		}
-
 		log.Logf("publishing %+v\n", ev)
-
 		// 发布一个事件
 		if err := p.Publish(context.Background(), ev); err != nil {
 			log.Logf("error publishing: %v", err)
