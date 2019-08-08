@@ -1,46 +1,42 @@
 package main
 
 import (
+	"context"
 	"github.com/micro/go-micro"
-	"github.com/micro/go-micro/broker"
+	"github.com/micro/go-micro/broker/nats"
+	"github.com/micro/go-micro/metadata"
 	"github.com/micro/go-micro/util/log"
+	proto "web/pubsub/base/proto"
 )
 
-func main() {
-	// New Service
-	service := micro.NewService(
-		micro.Name("bambooRat.micro.srv.billboard"),
-		micro.Version("latest"),
-	)
+// 当Sub 被消息触发执行的时候，所有的方法都会执行
+type Sub struct{}
 
-	// Initialise service
+func main() {
+	// 初始化之前指定nats作为broker
+	service := micro.NewService(
+		micro.Name("bambooRat.micro.srv.sub"),
+		micro.Version("latest"),
+		micro.Broker(nats.NewBroker()),
+	)
+	// service初始化会一并初始化broker 的init
 	service.Init()
 
-	broker := service.Server().Options().Broker
-
-	if err := broker.Init(); err != nil {
-		log.Fatalf("Broker Init error: %v", err)
+	// 注册一个订阅者
+	if err := micro.RegisterSubscriber("pubsub1", service.Server(), new(Sub)); err != nil {
+		log.Fatal(err)
 	}
-	if err := broker.Connect(); err != nil {
-		log.Fatalf("Broker Connect error: %v", err)
+	if err := micro.RegisterSubscriber("pubsub2", service.Server(), new(Sub)); err != nil {
+		log.Fatal(err)
 	}
-
-	if _, err := broker.Subscribe("topic1", Handler1); err != nil {
-		log.Fatalf("broker.Subscribe error: %v", err)
-	}
-	if _, err := broker.Subscribe("topic2", Handler); err != nil {
-		log.Fatalf("broker.Subscribe error: %v", err)
-	}
-	// Run service
+	// 启动service的时候执行broker的connect
 	if err := service.Run(); err != nil {
 		log.Fatal(err)
 	}
 }
-func Handler1(event broker.Event) error {
-	log.Logf("[sub] topic1: %v, %v", event.Message().Header, string(event.Message().Body))
-	return nil
-}
-func Handler(event broker.Event) error {
-	log.Logf("[sub] topic2: %v, %v", event.Message().Header, string(event.Message().Body))
+func (s *Sub) Process(ctx context.Context, event *proto.Event) error {
+	md, _ := metadata.FromContext(ctx)
+	log.Logf("[pubsub1] Received event %+v with metadata %+v\n", event, md)
+	// do something with event
 	return nil
 }
