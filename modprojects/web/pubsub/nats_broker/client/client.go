@@ -1,17 +1,19 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/broker"
+	"github.com/micro/go-micro/broker/nats"
 	"github.com/micro/go-micro/util/log"
 	"github.com/pborman/uuid"
 	"time"
 	proto "web/pubsub/base/proto"
 )
 
-func SendEv(topic string, b broker.Broker) {
+func SendEv(topic string, p micro.Publisher) {
 	t := time.NewTicker(5 * time.Second)
 
 	var i int
@@ -19,7 +21,7 @@ func SendEv(topic string, b broker.Broker) {
 		ev := proto.Event{
 			Id:        uuid.NewUUID().String(),
 			Timestamp: time.Now().Unix(),
-			Message:   fmt.Sprintf("Message you all day on %s, 'cause nothing's gonna change my love for you", topic),
+			Message:   fmt.Sprintf("pub topic name %s", topic),
 		}
 
 		body, _ := json.Marshal(ev)
@@ -32,7 +34,7 @@ func SendEv(topic string, b broker.Broker) {
 
 		log.Logf("publishing %+v", ev)
 
-		if err := b.Publish(topic, msg); err != nil {
+		if err := p.Publish(context.Background(), msg); err != nil {
 			log.Logf("error publishing: %v", err)
 		}
 		i++
@@ -40,26 +42,19 @@ func SendEv(topic string, b broker.Broker) {
 }
 
 func main() {
-	// New Service
+	// 初始化之前指定nats作为broker
 	service := micro.NewService(
-		micro.Name("go.micro.cli.pubsub"),
+		micro.Name("bambooRat.micro.cli.pubsub"),
 		micro.Version("latest"),
+		micro.Broker(nats.NewBroker()),
 	)
-
-	// Initialise service
+	pubTopic := "bambooRat.micro.pubsub.topic.event"
+	pub1 := micro.NewPublisher(pubTopic, service.Client())
+	// service初始化会一并初始化broker 的init
+	// 所以在service init前要把相对应的配置都搞定
 	service.Init()
-
-	b := service.Client().Options().Broker
-
-	if err := b.Init(); err != nil {
-		log.Fatalf("Broker Init error: %v", err)
-	}
-	if err := b.Connect(); err != nil {
-		log.Fatalf("Broker Connect error: %v", err)
-	}
-
-	go SendEv("go.micro.pubsub.topic.event", b)
-	// Run service
+	go SendEv(pubTopic, pub1)
+	// 启动service的时候执行broker的connect
 	if err := service.Run(); err != nil {
 		log.Fatal(err)
 	}
