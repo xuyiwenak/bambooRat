@@ -24,10 +24,8 @@ var (
 
 // Init 初始化配置
 func Init() {
-
 	m.Lock()
 	defer m.Unlock()
-
 	if inited {
 		log.Logf("[Init] 配置已经初始化过")
 		return
