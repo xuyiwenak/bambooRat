@@ -27,7 +27,8 @@ services:
     depends_on:
       - consul4
   mysql_db:
-    image: "mysql:latest"
+    image: "mysql"
+    container_name: "mysql8.0"
     restart: always
     #command: --default-authentication-plugin=mysql_native_password
     environment:
