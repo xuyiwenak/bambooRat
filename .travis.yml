@@ -1,0 +1,8 @@
+language: go
+go:
+  - 1.12.x
+env:
+  - GO111MODULE=on
+cache:
+  directories:
+    - $GOPATH/pkg/mod
